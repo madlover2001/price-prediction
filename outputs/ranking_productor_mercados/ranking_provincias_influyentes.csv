@@ -1,0 +1,23 @@
+﻿provincia_key,provincia,registros_productor,registros_mercados,registros_total,productos_distintos,productos_en_ambas,registros_balance,score_influencia,top_5_productos
+pichincha,Pichincha,371,3185,3556,17,4,371,4398,Frutilla | Maíz Suave Choclo | Papa Superchola | Tomate de Árbol | Pimiento
+guayas,Guayas,107,4040,4147,17,1,107,4386,Haba Tierna en Vaina | Maracuyá | Pimiento | Tomate Riñón de Invernadero | Frutilla
+azuay,Azuay,211,3125,3336,17,4,211,3858,Tomate Riñón De Invernadero | Tomate De Árbol | Maíz Suave Choclo | Yuca | Papa Superchola
+chimborazo,Chimborazo,583,1349,1932,15,8,583,3298,Tomate Riñón De Invernadero | Frutilla | Brócoli | Papa Superchola | Pimiento
+tungurahua,Tungurahua,439,1693,2132,14,6,439,3160,Tomate De Árbol | Frutilla | Tomate Riñón De Invernadero | Aguacate Fuerte | Papa Superchola
+imbabura,Imbabura,408,1366,1774,15,7,408,2765,Tomate De Árbol | Tomate Riñón De Invernadero | Frutilla | Maíz Suave Choclo | Aguacate Fuerte
+cotopaxi,Cotopaxi,409,1002,1411,11,5,409,2354,Tomate Riñón De Invernadero | Papa Superchola | Maíz Suave Choclo | Tomate de Árbol | Brócoli
+santa elena,Santa Elena,351,990,1341,16,4,351,2143,Maracuyá | Limón Sutil | Pimiento | Melón | Aguacate Fuerte
+manabi,Manabí,317,1051,1368,9,4,317,2102,Limón Sutil | Maracuyá | Pimiento | Yuca | Tomate Riñón A Campo Abierto
+santo domingo de los tsachilas,Santo Domingo De Los Tsáchilas,311,791,1102,16,2,311,1774,Yuca | Maracuyá | Naranjilla Híbrida | Limón Sutil | Melón
+bolivar,Bolivar,279,558,837,9,5,279,1520,Papa Superchola | Maíz Suave Choclo | Naranja | Naranjilla Híbrida | Tomate De Árbol
+los rios,Los Rios,200,703,903,9,3,200,1378,Yuca | Maracuyá | Naranja | Pimiento | Limón Sutil
+carchi,Carchi,302,240,542,5,3,240,1097,Papa Superchola | Haba Tierna En Vaina | Arveja Tierna En Vaina | Tomate de Árbol | Maíz Suave Choclo
+el oro,El Oro,117,484,601,7,1,117,860,Limón Sutil | Pimiento | Haba Tierna en Vaina | Maracuyá | Maíz Suave Choclo
+canar,Cañar,125,91,216,3,1,91,423,Papa Superchola | Haba Tierna en Vaina | Maíz Suave Choclo
+loja,Loja,0,374,374,11,0,0,374,Limón Sutil | Melón | Pimiento | Tomate Riñón de Invernadero | Yuca
+napo,Napo,194,0,194,2,0,0,194,Naranjilla Híbrida | Tomate De Árbol
+morona santiago,Morona Santiago,132,0,132,1,0,0,132,Yuca
+zamora chinchipe,Zamora Chinchipe,122,0,122,2,0,0,122,Naranjilla Híbrida | Yuca
+esmeraldas,Esmeraldas,113,0,113,1,0,0,113,Maracuyá
+pastaza,Pastaza,82,0,82,2,0,0,82,Naranjilla Híbrida | Yuca
+peru,Peru,0,24,24,1,0,0,24,Limón Sutil

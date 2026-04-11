@@ -1,0 +1,16 @@
+feature,importance
+rolling_mean_3,0.5145381
+precio_banano_internacional,0.23950352
+lag_1,0.05626385
+diff_2,0.050144926
+fertilizantes,0.035941906
+lag_4,0.03453466
+lag_6,0.022328222
+precio_productor_banano,0.019734524
+lag_3,0.009668204
+rolling_std_3,0.008786635
+ipc,0.0063055116
+diff_1,0.0016123077
+ipp,0.00037989215
+lag_2,0.00022008247
+lag_5,3.765732e-05

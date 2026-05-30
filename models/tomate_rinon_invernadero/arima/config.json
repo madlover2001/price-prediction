@@ -1,0 +1,137 @@
+{
+  "product_id": "tomate_rinon_invernadero",
+  "product_name": "Tomate Rinon de Invernadero",
+  "model_name": "arima",
+  "model_files": {
+    "Azuay": "models\\tomate_rinon_invernadero\\arima\\model_azuay.joblib",
+    "Chimborazo": "models\\tomate_rinon_invernadero\\arima\\model_chimborazo.joblib",
+    "Cotopaxi": "models\\tomate_rinon_invernadero\\arima\\model_cotopaxi.joblib",
+    "Imbabura": "models\\tomate_rinon_invernadero\\arima\\model_imbabura.joblib",
+    "Tungurahua": "models\\tomate_rinon_invernadero\\arima\\model_tungurahua.joblib"
+  },
+  "target_column": "target_precio_mercado_usdkg",
+  "train_ratio": 0.8,
+  "order": [
+    1,
+    1,
+    1
+  ],
+  "seasonal_order": [
+    1,
+    0,
+    1,
+    12
+  ],
+  "order_grid": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      2,
+      1,
+      1
+    ]
+  ],
+  "seasonal_order_grid": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      12
+    ]
+  ],
+  "validation_ratio_within_train": 0.8,
+  "selection_strategy": "product_order_override",
+  "selected_orders_by_province": {
+    "Azuay": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "tuning_results": []
+    },
+    "Chimborazo": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "tuning_results": []
+    },
+    "Cotopaxi": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "tuning_results": []
+    },
+    "Imbabura": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "tuning_results": []
+    },
+    "Tungurahua": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "tuning_results": []
+    }
+  },
+  "min_observations": 24,
+  "province_metrics_file": "models\\tomate_rinon_invernadero\\arima\\province_metrics.csv"
+}

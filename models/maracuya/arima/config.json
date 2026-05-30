@@ -1,0 +1,137 @@
+{
+  "product_id": "maracuya",
+  "product_name": "Maracuya",
+  "model_name": "arima",
+  "model_files": {
+    "Guayas": "models\\maracuya\\arima\\model_guayas.joblib",
+    "Los Rios": "models\\maracuya\\arima\\model_los_rios.joblib",
+    "Manabí": "models\\maracuya\\arima\\model_manabí.joblib",
+    "Santa Elena": "models\\maracuya\\arima\\model_santa_elena.joblib",
+    "Santo Domingo De Los Tsáchilas": "models\\maracuya\\arima\\model_santo_domingo_de_los_tsáchilas.joblib"
+  },
+  "target_column": "target_precio_mercado_usdkg",
+  "train_ratio": 0.8,
+  "order": [
+    1,
+    1,
+    1
+  ],
+  "seasonal_order": [
+    1,
+    0,
+    1,
+    12
+  ],
+  "order_grid": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      2,
+      1,
+      1
+    ]
+  ],
+  "seasonal_order_grid": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      12
+    ]
+  ],
+  "validation_ratio_within_train": 0.8,
+  "selection_strategy": "product_order_override",
+  "selected_orders_by_province": {
+    "Guayas": {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        12
+      ],
+      "tuning_results": []
+    },
+    "Los Rios": {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        12
+      ],
+      "tuning_results": []
+    },
+    "Manabí": {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        12
+      ],
+      "tuning_results": []
+    },
+    "Santa Elena": {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        12
+      ],
+      "tuning_results": []
+    },
+    "Santo Domingo De Los Tsáchilas": {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        1,
+        12
+      ],
+      "tuning_results": []
+    }
+  },
+  "min_observations": 24,
+  "province_metrics_file": "models\\maracuya\\arima\\province_metrics.csv"
+}

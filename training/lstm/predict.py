@@ -5,7 +5,6 @@ import sys
 from pathlib import Path
 
 import joblib
-import numpy as np
 import pandas as pd
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
@@ -29,11 +28,11 @@ def _import_tensorflow():
     return tf
 
 
-def predict_product(product_id: str, province: str | None = None) -> pd.DataFrame:
+def predict_product(product_id: str, province: str | None = None, feature_set: str = "full") -> pd.DataFrame:
     tf = _import_tensorflow()
     product = get_product(product_id)
-    bundle = load_product_dataset(product)
-    directory = artifact_dir(product_id, MODEL_NAME)
+    bundle = load_product_dataset(product, feature_set=feature_set)
+    directory = artifact_dir(product_id, MODEL_NAME, feature_set)
     metadata = read_json(directory / "training_metadata.json")
     model = tf.keras.models.load_model(directory / "model.keras")
     feature_scaler = joblib.load(directory / "feature_scaler.joblib")
@@ -69,13 +68,14 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Predice con un modelo LSTM entrenado.")
     parser.add_argument("--product", required=True)
     parser.add_argument("--province")
+    parser.add_argument("--feature-set", default="full", choices=["base", "full"])
     parser.add_argument("--output")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
-    predictions = predict_product(args.product, args.province)
+    predictions = predict_product(args.product, args.province, args.feature_set)
     if args.output:
         predictions.to_csv(args.output, index=False, encoding="utf-8-sig")
     else:

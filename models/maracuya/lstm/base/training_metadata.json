@@ -1,0 +1,63 @@
+{
+  "product_id": "maracuya",
+  "product_name": "Maracuya",
+  "model_name": "lstm",
+  "feature_set": "base",
+  "model_file": "models\\maracuya\\lstm\\base\\model.keras",
+  "feature_scaler_file": "models\\maracuya\\lstm\\base\\feature_scaler.joblib",
+  "target_scaler_file": "models\\maracuya\\lstm\\base\\target_scaler.joblib",
+  "target_column": "target_precio_mercado_usdkg",
+  "feature_columns": [
+    "provincia_id",
+    "mes_num",
+    "trimestre",
+    "mes_sin",
+    "mes_cos",
+    "target_lag_1",
+    "target_lag_2",
+    "target_lag_3",
+    "target_lag_6",
+    "target_lag_12",
+    "target_rolling_mean_3",
+    "target_rolling_std_3",
+    "target_rolling_mean_6",
+    "target_rolling_std_6",
+    "target_momentum_1_3",
+    "target_momentum_1_6"
+  ],
+  "window_size": 8,
+  "holdout_test_ratio": 0.2,
+  "epochs": 120,
+  "batch_size": 8,
+  "lstm_units": 64,
+  "learning_rate": 0.001,
+  "verbose": 0,
+  "validation_rmse_mean": 0.18795831439770164,
+  "validation_windows_results": [
+    {
+      "mae": 0.10928168475627899,
+      "rmse": 0.14783969304543493,
+      "mape": 29.76641145561425,
+      "r2": 0.1598288128298071,
+      "directional_accuracy": 0.5540540540540541,
+      "n_test": 75
+    },
+    {
+      "mae": 0.1228471288987256,
+      "rmse": 0.1637457074869337,
+      "mape": 18.061809317030743,
+      "r2": 0.23349627333479372,
+      "directional_accuracy": 0.4166666666666667,
+      "n_test": 109
+    },
+    {
+      "mae": 0.19588913591135115,
+      "rmse": 0.2522895426607363,
+      "mape": 22.180653619082634,
+      "r2": -0.038805902619145405,
+      "directional_accuracy": 0.4939759036144578,
+      "n_test": 84
+    }
+  ],
+  "n_validation_windows": 3
+}

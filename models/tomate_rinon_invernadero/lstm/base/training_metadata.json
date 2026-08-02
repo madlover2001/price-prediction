@@ -1,0 +1,63 @@
+{
+  "product_id": "tomate_rinon_invernadero",
+  "product_name": "Tomate Rinon de Invernadero",
+  "model_name": "lstm",
+  "feature_set": "base",
+  "model_file": "models\\tomate_rinon_invernadero\\lstm\\base\\model.keras",
+  "feature_scaler_file": "models\\tomate_rinon_invernadero\\lstm\\base\\feature_scaler.joblib",
+  "target_scaler_file": "models\\tomate_rinon_invernadero\\lstm\\base\\target_scaler.joblib",
+  "target_column": "target_precio_mercado_usdkg",
+  "feature_columns": [
+    "provincia_id",
+    "mes_num",
+    "trimestre",
+    "mes_sin",
+    "mes_cos",
+    "target_lag_1",
+    "target_lag_2",
+    "target_lag_3",
+    "target_lag_6",
+    "target_lag_12",
+    "target_rolling_mean_3",
+    "target_rolling_std_3",
+    "target_rolling_mean_6",
+    "target_rolling_std_6",
+    "target_momentum_1_3",
+    "target_momentum_1_6"
+  ],
+  "window_size": 8,
+  "holdout_test_ratio": 0.2,
+  "epochs": 120,
+  "batch_size": 8,
+  "lstm_units": 64,
+  "learning_rate": 0.001,
+  "verbose": 0,
+  "validation_rmse_mean": 0.15080019743097148,
+  "validation_windows_results": [
+    {
+      "mae": 0.19274417210269618,
+      "rmse": 0.23602564671911896,
+      "mape": 40.1189239558645,
+      "r2": -1.686861196355499,
+      "directional_accuracy": 0.37272727272727274,
+      "n_test": 111
+    },
+    {
+      "mae": 0.07930884205776711,
+      "rmse": 0.10395477860170052,
+      "mape": 13.414229024027255,
+      "r2": 0.47749604979966875,
+      "directional_accuracy": 0.6052631578947368,
+      "n_test": 115
+    },
+    {
+      "mae": 0.0897664887325786,
+      "rmse": 0.11242016697209486,
+      "mape": 15.849895615566837,
+      "r2": 0.4841264616723673,
+      "directional_accuracy": 0.5,
+      "n_test": 107
+    }
+  ],
+  "n_validation_windows": 3
+}

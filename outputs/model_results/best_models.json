@@ -2,43 +2,49 @@
   "maracuya": {
     "product_name": "Maracuya",
     "best_model": "xgboost",
-    "selection_metric": "rmse",
-    "metrics": {
-      "mae": 0.07350603367220512,
-      "rmse": 0.09490421329699646,
-      "mape": 10.064152230499376,
-      "r2": 0.5795777418499097,
-      "directional_accuracy": 0.8780487804878049
+    "feature_set": "full",
+    "selection_metric": "validation_rmse_mean",
+    "validation_rmse_mean": 0.1351209322669006,
+    "test_metrics": {
+      "mae": 0.08044411820051409,
+      "rmse": 0.10147212200833844,
+      "mape": 11.03180844346058,
+      "r2": 0.5193729620140517,
+      "directional_accuracy": 0.9024390243902439
     },
-    "artifact_dir": "models\\maracuya\\xgboost",
-    "prediction_file": "outputs\\model_results\\predictions\\maracuya_xgboost_predictions.csv"
+    "artifact_dir": "models\\maracuya\\xgboost\\full",
+    "prediction_file": "outputs\\model_results\\predictions\\maracuya_xgboost_full_predictions.csv"
   },
   "papa_superchola": {
     "product_name": "Papa Superchola",
     "best_model": "xgboost",
-    "selection_metric": "rmse",
-    "metrics": {
-      "mae": 0.044766654378562455,
-      "rmse": 0.0562137055386023,
-      "mape": 8.647582065245599,
-      "r2": 0.8537587790616468,
-      "directional_accuracy": 0.9066666666666666
+    "feature_set": "full",
+    "selection_metric": "validation_rmse_mean",
+    "validation_rmse_mean": 0.04908953493018426,
+    "test_metrics": {
+      "mae": 0.04714405992504517,
+      "rmse": 0.06259783764898515,
+      "mape": 8.841287910876613,
+      "r2": 0.8186556462066227,
+      "directional_accuracy": 0.8666666666666667
     },
-    "artifact_dir": "models\\papa_superchola\\xgboost",
-    "prediction_file": "outputs\\model_results\\predictions\\papa_superchola_xgboost_predictions.csv"
+    "artifact_dir": "models\\papa_superchola\\xgboost\\full",
+    "prediction_file": "outputs\\model_results\\predictions\\papa_superchola_xgboost_full_predictions.csv"
   },
   "tomate_rinon_invernadero": {
     "product_name": "Tomate Rinon de Invernadero",
-    "best_model": "lstm",
-    "selection_metric": "rmse",
-    "metrics": {
-      "mae": 0.06402210587141466,
-      "rmse": 0.07815218032706986,
-      "mape": 9.563299585009107,
-      "r2": 0.7759894479629361,
-      "directional_accuracy": 0.7628865979381443
+    "best_model": "xgboost",
+    "feature_set": "full",
+    "selection_metric": "validation_rmse_mean",
+    "validation_rmse_mean": 0.07885580827092585,
+    "test_metrics": {
+      "mae": 0.06073876059530758,
+      "rmse": 0.07670917692753285,
+      "mape": 10.15145921454581,
+      "r2": 0.7841853280358108,
+      "directional_accuracy": 0.8762886597938144
     },
-    "artifact_dir": "models\\tomate_rinon_invernadero\\lstm",
-    "prediction_file": "outputs\\model_results\\predictions\\tomate_rinon_invernadero_lstm_predictions.csv"
+    "artifact_dir": "models\\tomate_rinon_invernadero\\xgboost\\full",
+    "prediction_file": "outputs\\model_results\\predictions\\tomate_rinon_invernadero_xgboost_full_predictions.csv"
   }
 }

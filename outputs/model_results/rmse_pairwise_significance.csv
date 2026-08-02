@@ -1,0 +1,10 @@
+﻿product_id,product_name,model_a,model_b,n,delta_rmse_a_minus_b,delta_ci_lower,delta_ci_upper,significant_95,p_value_bootstrap,significant_holm
+papa_superchola,Papa Superchola,arima,lstm,71,0.2278301903475983,0.1539510244529464,0.4844911334789547,True,0.0,True
+papa_superchola,Papa Superchola,arima,xgboost,71,0.26940618447287557,0.20071177809679064,0.5196568539611899,True,0.0,True
+papa_superchola,Papa Superchola,lstm,xgboost,71,0.041575994125277266,0.020718290776533282,0.05799371919494181,True,0.0,True
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,arima,lstm,98,0.004811711916499567,-0.011156322814406427,0.014724946794582468,False,0.825,False
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,arima,xgboost,98,0.003874201759238874,-0.006854044908564987,0.022441381939149338,False,0.336,False
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,lstm,xgboost,98,-0.0009375101572606931,-0.004091838647180239,0.016462636195580173,False,0.28,False
+maracuya,Maracuya,arima,lstm,83,0.010347905798212154,-0.010099268997732874,0.034059172548827926,False,0.294,False
+maracuya,Maracuya,arima,xgboost,83,0.05203566562583367,0.03400541122374083,0.07209116569247026,True,0.0,True
+maracuya,Maracuya,lstm,xgboost,83,0.04168775982762152,0.02508518857641632,0.058650865674266944,True,0.0,True

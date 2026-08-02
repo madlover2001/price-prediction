@@ -33,10 +33,10 @@ def slugify(value: str) -> str:
     return text
 
 
-def load_predictions(product_id: str) -> pd.DataFrame:
+def load_predictions(product_id: str, feature_set: str = "full") -> pd.DataFrame:
     frames = []
     for model_name in MODEL_ORDER:
-        path = PREDICTIONS_DIR / f"{product_id}_{model_name}_predictions.csv"
+        path = PREDICTIONS_DIR / f"{product_id}_{model_name}_{feature_set}_predictions.csv"
         if not path.exists():
             continue
         df = pd.read_csv(path, encoding="utf-8-sig")
@@ -50,8 +50,8 @@ def load_predictions(product_id: str) -> pd.DataFrame:
     return pd.concat(frames, ignore_index=True).dropna(subset=["fecha"])
 
 
-def plot_product_province(product_id: str, province: str, output_dir: Path) -> Path:
-    df = load_predictions(product_id)
+def plot_product_province(product_id: str, province: str, output_dir: Path, feature_set: str = "full") -> Path:
+    df = load_predictions(product_id, feature_set)
     province_df = df.loc[df["provincia"].str.lower() == province.lower()].copy()
     if province_df.empty:
         available = ", ".join(sorted(df["provincia"].dropna().unique()))
@@ -103,8 +103,8 @@ def plot_product_province(product_id: str, province: str, output_dir: Path) -> P
     return output_path
 
 
-def plot_product_summary(product_id: str, output_dir: Path) -> Path:
-    df = load_predictions(product_id)
+def plot_product_summary(product_id: str, output_dir: Path, feature_set: str = "full") -> Path:
+    df = load_predictions(product_id, feature_set)
     product_name = df["producto"].mode().iloc[0]
     summary = (
         df.groupby(["fecha", "model_name"], as_index=False)
@@ -151,17 +151,19 @@ def plot_product_summary(product_id: str, output_dir: Path) -> Path:
     return output_path
 
 
-def generate_plots(product_id: str | None, province: str | None, output_dir: Path) -> list[Path]:
+def generate_plots(
+    product_id: str | None, province: str | None, output_dir: Path, feature_set: str = "full"
+) -> list[Path]:
     product_ids = [product_id] if product_id else list(PRODUCTS)
     output_paths = []
 
     for current_product in product_ids:
-        df = load_predictions(current_product)
-        output_paths.append(plot_product_summary(current_product, output_dir))
+        df = load_predictions(current_product, feature_set)
+        output_paths.append(plot_product_summary(current_product, output_dir, feature_set))
 
         provinces = [province] if province else sorted(df["provincia"].dropna().unique())
         for current_province in provinces:
-            output_paths.append(plot_product_province(current_product, current_province, output_dir))
+            output_paths.append(plot_product_province(current_product, current_province, output_dir, feature_set))
 
     return output_paths
 
@@ -173,12 +175,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--product", choices=list(PRODUCTS), help="Producto especifico. Si se omite, grafica todos.")
     parser.add_argument("--province", help="Provincia especifica. Si se omite, grafica todas.")
     parser.add_argument("--output-dir", type=Path, default=PLOTS_DIR)
+    parser.add_argument(
+        "--feature-set",
+        default="full",
+        choices=["base", "full"],
+        help="Configuracion de features a graficar (ablacion). 'full' es la del prototipo.",
+    )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
-    paths = generate_plots(args.product, args.province, args.output_dir)
+    paths = generate_plots(args.product, args.province, args.output_dir, args.feature_set)
     for path in paths:
         print(path)
 

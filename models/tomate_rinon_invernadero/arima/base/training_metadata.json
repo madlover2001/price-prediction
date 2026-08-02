@@ -1,0 +1,739 @@
+{
+  "product_id": "tomate_rinon_invernadero",
+  "product_name": "Tomate Rinon de Invernadero",
+  "model_name": "arima",
+  "feature_set": "base",
+  "model_files": {
+    "Azuay": "models\\tomate_rinon_invernadero\\arima\\base\\model_azuay.joblib",
+    "Chimborazo": "models\\tomate_rinon_invernadero\\arima\\base\\model_chimborazo.joblib",
+    "Cotopaxi": "models\\tomate_rinon_invernadero\\arima\\base\\model_cotopaxi.joblib",
+    "Imbabura": "models\\tomate_rinon_invernadero\\arima\\base\\model_imbabura.joblib",
+    "Tungurahua": "models\\tomate_rinon_invernadero\\arima\\base\\model_tungurahua.joblib"
+  },
+  "target_column": "target_precio_mercado_usdkg",
+  "exog_columns": [],
+  "holdout_test_ratio": 0.2,
+  "order_grid": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      2,
+      1,
+      1
+    ]
+  ],
+  "seasonal_order_grid": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      12
+    ]
+  ],
+  "selection_strategy": "validation_grid_search",
+  "selected_orders_by_province": {
+    "Azuay": {
+      "order": [
+        2,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "validation_rmse_mean": 0.14628448121831275,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.1718873891948115,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.17889392782623656,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.19559456813170284,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.178310097081784,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.19759082642833048,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.18564196065676597,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.1579443980461666,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.14628448121831275,
+          "n_windows": 3
+        }
+      ]
+    },
+    "Chimborazo": {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "validation_rmse_mean": 0.10761146359763714,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.10761146359763714,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.11571954367070203,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.12109022580766866,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.125161717582694,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.12082165867021999,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.13277105878990444,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.1180808327879856,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.12312222352453944,
+          "n_windows": 3
+        }
+      ]
+    },
+    "Cotopaxi": {
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "validation_rmse_mean": 0.13896322763534646,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.1568013770192248,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.15358802331814994,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.16130869157540098,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.13896322763534646,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.1645676241040105,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.14104398921229858,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.1595905865504633,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.42963997012580973,
+          "n_windows": 3
+        }
+      ]
+    },
+    "Imbabura": {
+      "order": [
+        2,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "validation_rmse_mean": 0.10652952368436357,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.1134497366917517,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.11040012874450056,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.13234690850190348,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.11957261447756906,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.1356091930718403,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.1306586552109199,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.13765769971848069,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.10652952368436357,
+          "n_windows": 3
+        }
+      ]
+    },
+    "Tungurahua": {
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "validation_rmse_mean": 0.10613716811706993,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.11604268672701816,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.11243181472108599,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.11227375368784297,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.10613716811706993,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.11560256100978801,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.11757803605743433,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.11207031579415172,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        }
+      ]
+    }
+  },
+  "min_observations": 24,
+  "min_test_obs_for_province_conclusions": 5,
+  "validation_rmse_mean": 0.12110517285054598,
+  "province_metrics_file": "models\\tomate_rinon_invernadero\\arima\\base\\province_metrics.csv"
+}

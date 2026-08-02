@@ -1,0 +1,63 @@
+{
+  "product_id": "papa_superchola",
+  "product_name": "Papa Superchola",
+  "model_name": "lstm",
+  "feature_set": "base",
+  "model_file": "models\\papa_superchola\\lstm\\base\\model.keras",
+  "feature_scaler_file": "models\\papa_superchola\\lstm\\base\\feature_scaler.joblib",
+  "target_scaler_file": "models\\papa_superchola\\lstm\\base\\target_scaler.joblib",
+  "target_column": "target_precio_mercado_usdkg",
+  "feature_columns": [
+    "provincia_id",
+    "mes_num",
+    "trimestre",
+    "mes_sin",
+    "mes_cos",
+    "target_lag_1",
+    "target_lag_2",
+    "target_lag_3",
+    "target_lag_6",
+    "target_lag_12",
+    "target_rolling_mean_3",
+    "target_rolling_std_3",
+    "target_rolling_mean_6",
+    "target_rolling_std_6",
+    "target_momentum_1_3",
+    "target_momentum_1_6"
+  ],
+  "window_size": 8,
+  "holdout_test_ratio": 0.2,
+  "epochs": 120,
+  "batch_size": 8,
+  "lstm_units": 64,
+  "learning_rate": 0.001,
+  "verbose": 0,
+  "validation_rmse_mean": 0.1223061711907006,
+  "validation_windows_results": [
+    {
+      "mae": 0.11127968158187537,
+      "rmse": 0.1271567619938017,
+      "mape": 25.039884755893745,
+      "r2": -0.8501317290758021,
+      "directional_accuracy": 0.6666666666666666,
+      "n_test": 58
+    },
+    {
+      "mae": 0.09827882947311514,
+      "rmse": 0.11674102816722857,
+      "mape": 28.03981897761183,
+      "r2": 0.08045735547814059,
+      "directional_accuracy": 0.4457831325301205,
+      "n_test": 84
+    },
+    {
+      "mae": 0.10599036493771513,
+      "rmse": 0.12302072341107158,
+      "mape": 27.43817148579745,
+      "r2": -0.6551279693324326,
+      "directional_accuracy": 0.6428571428571429,
+      "n_test": 71
+    }
+  ],
+  "n_validation_windows": 3
+}

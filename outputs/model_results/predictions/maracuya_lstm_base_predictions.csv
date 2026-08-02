@@ -1,0 +1,84 @@
+﻿fecha,producto,provincia,y_true,y_pred,model_name,product_id,feature_set
+2024-05-01,Maracuya,Guayas,0.90111107,0.9884675,lstm,maracuya,base
+2024-06-01,Maracuya,Guayas,0.914375,0.9174867,lstm,maracuya,base
+2024-07-01,Maracuya,Guayas,0.79138887,0.85970956,lstm,maracuya,base
+2024-08-01,Maracuya,Guayas,0.7358333,0.65192854,lstm,maracuya,base
+2024-09-01,Maracuya,Guayas,0.941875,0.47975844,lstm,maracuya,base
+2024-10-01,Maracuya,Guayas,0.795,0.563548,lstm,maracuya,base
+2024-11-01,Maracuya,Guayas,0.855,0.5288695,lstm,maracuya,base
+2024-12-01,Maracuya,Guayas,0.82624996,0.68330467,lstm,maracuya,base
+2025-01-01,Maracuya,Guayas,0.91875,0.69588375,lstm,maracuya,base
+2025-02-01,Maracuya,Guayas,0.888125,0.77881426,lstm,maracuya,base
+2025-03-01,Maracuya,Guayas,0.7841071,0.8492243,lstm,maracuya,base
+2025-04-01,Maracuya,Guayas,0.7983333,0.8522165,lstm,maracuya,base
+2025-05-01,Maracuya,Guayas,0.9444445,0.8675309,lstm,maracuya,base
+2025-06-01,Maracuya,Guayas,0.9277731,0.8885362,lstm,maracuya,base
+2025-07-01,Maracuya,Guayas,0.8528333,0.77707195,lstm,maracuya,base
+2025-08-01,Maracuya,Guayas,0.618125,0.75836575,lstm,maracuya,base
+2025-09-01,Maracuya,Guayas,0.6620833,0.57781684,lstm,maracuya,base
+2025-10-01,Maracuya,Guayas,0.830625,0.65328306,lstm,maracuya,base
+2025-11-01,Maracuya,Guayas,0.73875,0.68186754,lstm,maracuya,base
+2025-12-01,Maracuya,Guayas,0.6175,0.7027659,lstm,maracuya,base
+2026-01-01,Maracuya,Guayas,0.7175,0.7092734,lstm,maracuya,base
+2026-02-01,Maracuya,Guayas,0.8101785,0.74554616,lstm,maracuya,base
+2025-03-01,Maracuya,Los Rios,0.91999996,0.97210723,lstm,maracuya,base
+2025-04-01,Maracuya,Los Rios,0.9166667,0.9959555,lstm,maracuya,base
+2025-05-01,Maracuya,Los Rios,0.946,1.018198,lstm,maracuya,base
+2025-06-01,Maracuya,Los Rios,0.94111115,1.0016166,lstm,maracuya,base
+2025-07-01,Maracuya,Los Rios,0.935,1.0232943,lstm,maracuya,base
+2025-08-01,Maracuya,Los Rios,0.9075,0.94582856,lstm,maracuya,base
+2025-09-01,Maracuya,Los Rios,0.9075,0.82379663,lstm,maracuya,base
+2025-10-01,Maracuya,Los Rios,0.935,0.78084487,lstm,maracuya,base
+2025-11-01,Maracuya,Los Rios,0.85,0.7825696,lstm,maracuya,base
+2025-12-01,Maracuya,Los Rios,0.82,0.8519621,lstm,maracuya,base
+2026-01-01,Maracuya,Los Rios,0.8225,0.8073658,lstm,maracuya,base
+2026-02-01,Maracuya,Los Rios,0.91999996,0.8682053,lstm,maracuya,base
+2024-08-01,Maracuya,Manabí,0.52375,0.6363276,lstm,maracuya,base
+2024-09-01,Maracuya,Manabí,0.585625,0.64590526,lstm,maracuya,base
+2024-10-01,Maracuya,Manabí,0.6329167,0.8084626,lstm,maracuya,base
+2024-11-01,Maracuya,Manabí,0.5598214,0.77106005,lstm,maracuya,base
+2024-12-01,Maracuya,Manabí,0.68222225,0.7394635,lstm,maracuya,base
+2025-01-01,Maracuya,Manabí,0.744375,0.66394156,lstm,maracuya,base
+2025-02-01,Maracuya,Manabí,0.78749996,0.74485755,lstm,maracuya,base
+2025-03-01,Maracuya,Manabí,0.5225893,0.7990792,lstm,maracuya,base
+2025-04-01,Maracuya,Manabí,0.70053566,0.9164925,lstm,maracuya,base
+2025-05-01,Maracuya,Manabí,0.7921428,0.789358,lstm,maracuya,base
+2025-06-01,Maracuya,Manabí,0.79835415,0.77713674,lstm,maracuya,base
+2025-07-01,Maracuya,Manabí,0.71326387,0.7416777,lstm,maracuya,base
+2025-08-01,Maracuya,Manabí,0.5744445,0.76871014,lstm,maracuya,base
+2025-09-01,Maracuya,Manabí,0.56277776,0.7231071,lstm,maracuya,base
+2025-10-01,Maracuya,Manabí,0.52625,0.66190785,lstm,maracuya,base
+2025-11-01,Maracuya,Manabí,0.5871429,0.62445235,lstm,maracuya,base
+2025-12-01,Maracuya,Manabí,0.4885714,0.62173045,lstm,maracuya,base
+2026-01-01,Maracuya,Manabí,0.56,0.48388368,lstm,maracuya,base
+2026-02-01,Maracuya,Manabí,0.73214287,0.5679612,lstm,maracuya,base
+2025-04-01,Maracuya,Santa Elena,1.1466666,1.316289,lstm,maracuya,base
+2025-05-01,Maracuya,Santa Elena,1.014,1.2273198,lstm,maracuya,base
+2025-06-01,Maracuya,Santa Elena,1.0444444,1.3263373,lstm,maracuya,base
+2025-07-01,Maracuya,Santa Elena,1.062,1.353444,lstm,maracuya,base
+2025-08-01,Maracuya,Santa Elena,0.8425,1.2292811,lstm,maracuya,base
+2025-09-01,Maracuya,Santa Elena,0.85249996,0.9561178,lstm,maracuya,base
+2025-10-01,Maracuya,Santa Elena,0.99600005,1.0305836,lstm,maracuya,base
+2025-11-01,Maracuya,Santa Elena,1.205,1.0998356,lstm,maracuya,base
+2025-12-01,Maracuya,Santa Elena,0.80333334,1.0623548,lstm,maracuya,base
+2026-01-01,Maracuya,Santa Elena,0.792,0.99688363,lstm,maracuya,base
+2026-02-01,Maracuya,Santa Elena,0.91499996,1.1059277,lstm,maracuya,base
+2024-08-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7222222,0.6287742,lstm,maracuya,base
+2024-09-01,Maracuya,Santo Domingo De Los Tsáchilas,0.65250003,0.8075031,lstm,maracuya,base
+2024-10-01,Maracuya,Santo Domingo De Los Tsáchilas,0.62222224,0.91528344,lstm,maracuya,base
+2024-11-01,Maracuya,Santo Domingo De Los Tsáchilas,0.57125,0.9792102,lstm,maracuya,base
+2024-12-01,Maracuya,Santo Domingo De Los Tsáchilas,0.75250006,0.97485876,lstm,maracuya,base
+2025-01-01,Maracuya,Santo Domingo De Los Tsáchilas,0.6742857,0.7070837,lstm,maracuya,base
+2025-02-01,Maracuya,Santo Domingo De Los Tsáchilas,0.75,0.71518415,lstm,maracuya,base
+2025-03-01,Maracuya,Santo Domingo De Los Tsáchilas,0.6685714,0.5803887,lstm,maracuya,base
+2025-04-01,Maracuya,Santo Domingo De Los Tsáchilas,0.61428577,0.57090586,lstm,maracuya,base
+2025-05-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7411111,0.5703193,lstm,maracuya,base
+2025-06-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7317647,0.6566996,lstm,maracuya,base
+2025-07-01,Maracuya,Santo Domingo De Los Tsáchilas,0.715,0.68288815,lstm,maracuya,base
+2025-08-01,Maracuya,Santo Domingo De Los Tsáchilas,0.6975,0.69448376,lstm,maracuya,base
+2025-09-01,Maracuya,Santo Domingo De Los Tsáchilas,0.75777775,0.71617514,lstm,maracuya,base
+2025-10-01,Maracuya,Santo Domingo De Los Tsáchilas,0.78125,0.7492791,lstm,maracuya,base
+2025-11-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7185714,0.74255764,lstm,maracuya,base
+2025-12-01,Maracuya,Santo Domingo De Los Tsáchilas,0.73999995,0.7947624,lstm,maracuya,base
+2026-01-01,Maracuya,Santo Domingo De Los Tsáchilas,0.75749993,0.7287349,lstm,maracuya,base
+2026-02-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7228572,0.77474064,lstm,maracuya,base

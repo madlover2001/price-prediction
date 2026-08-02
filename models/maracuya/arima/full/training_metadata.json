@@ -1,0 +1,764 @@
+{
+  "product_id": "maracuya",
+  "product_name": "Maracuya",
+  "model_name": "arima",
+  "feature_set": "full",
+  "model_files": {
+    "Guayas": "models\\maracuya\\arima\\full\\model_guayas.joblib",
+    "Los Rios": "models\\maracuya\\arima\\full\\model_los_rios.joblib",
+    "Manabí": "models\\maracuya\\arima\\full\\model_manabí.joblib",
+    "Santa Elena": "models\\maracuya\\arima\\full\\model_santa_elena.joblib",
+    "Santo Domingo De Los Tsáchilas": "models\\maracuya\\arima\\full\\model_santo_domingo_de_los_tsáchilas.joblib"
+  },
+  "target_column": "target_precio_mercado_usdkg",
+  "exog_columns": [
+    "mercados_observaciones",
+    "mercados_distintos",
+    "tipos_mercado_distintos",
+    "precio_productor_provincia_usdkg",
+    "precio_productor_nacional_usdkg",
+    "precio_productor_usdkg_filled",
+    "productor_missing_exact",
+    "fertilizantes_precio_promedio_provincia",
+    "fertilizantes_precio_promedio_nacional",
+    "fertilizantes_precio_promedio_filled",
+    "fertilizantes_registros_provincia",
+    "fertilizantes_ingredientes_activos_provincia",
+    "fertilizantes_missing_exact",
+    "ipc_alimentos",
+    "inflacion_mensual",
+    "inflacion_anual",
+    "inflacion_acumulada",
+    "ibc",
+    "ipm",
+    "ipp_n",
+    "mes_num",
+    "trimestre",
+    "mes_sin",
+    "mes_cos"
+  ],
+  "holdout_test_ratio": 0.2,
+  "order_grid": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      2,
+      1,
+      1
+    ]
+  ],
+  "seasonal_order_grid": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      12
+    ]
+  ],
+  "selection_strategy": "validation_grid_search",
+  "selected_orders_by_province": {
+    "Guayas": {
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "validation_rmse_mean": 1.7205358863822398,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 1.7205358863822398,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 1.7473150649191318,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 1.7556543611714874,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 1.727947908102722,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        }
+      ]
+    },
+    "Los Rios": {
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "validation_rmse_mean": 0.3912913365702944,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.3912913365702944,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.4208097021639652,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.39194410495009335,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.4152643791343562,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        }
+      ]
+    },
+    "Manabí": {
+      "order": [
+        1,
+        1,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "validation_rmse_mean": 0.40138323994178204,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.4020238494783632,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.46929322400330903,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.40275736877876106,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.46071273195385115,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.40138323994178204,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.45071733602783554,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 3
+        }
+      ]
+    },
+    "Santa Elena": {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "validation_rmse_mean": 0.4196942029099124,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.4196942029099124,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.44734804443445286,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.44144031455550053,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.4459166272849961,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.4315780349457136,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.5225985831498948,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.43027813569419654,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.43052835802752315,
+          "n_windows": 3
+        }
+      ]
+    },
+    "Santo Domingo De Los Tsáchilas": {
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "validation_rmse_mean": 0.5117380016326565,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.526113461060073,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.5774574538691549,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.5169819130037723,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.5117380016326565,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.5408310523234293,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.5642062304025436,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.6159237278762446,
+          "n_windows": 3
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.555905302886859,
+          "n_windows": 3
+        }
+      ]
+    }
+  },
+  "min_observations": 24,
+  "min_test_obs_for_province_conclusions": 5,
+  "validation_rmse_mean": 0.6889285334873769,
+  "province_metrics_file": "models\\maracuya\\arima\\full\\province_metrics.csv"
+}

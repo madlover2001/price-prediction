@@ -15,16 +15,19 @@ class ProductDataset:
     feature_columns: list[str]
     target_column: str
     date_column: str
+    feature_set: str = "full"
 
 
 REQUIRED_COLUMNS = {"fecha", "provincia", "provincia_id", "target_precio_mercado_usdkg"}
 
 
-def load_product_dataset(config: ProductConfig) -> ProductDataset:
+def load_product_dataset(config: ProductConfig, feature_set: str = "full") -> ProductDataset:
     if not config.dataset_path.exists():
         raise FileNotFoundError(f"No existe dataset: {config.dataset_path}")
     if not config.metadata_path.exists():
         raise FileNotFoundError(f"No existe metadata: {config.metadata_path}")
+    if feature_set not in ("base", "full"):
+        raise ValueError(f"feature_set invalido: {feature_set}. Valores validos: base, full")
 
     metadata = read_json(config.metadata_path)
     df = pd.read_csv(config.dataset_path, encoding="utf-8-sig")
@@ -33,7 +36,12 @@ def load_product_dataset(config: ProductConfig) -> ProductDataset:
 
     target_column = metadata.get("target_column", "target_precio_mercado_usdkg")
     date_column = metadata.get("date_column", "fecha")
-    feature_columns = list(metadata.get("recommended_model_features", []))
+    # base = solo historia propia del target + calendario (para medir el aporte real de
+    # las exogenas via ablacion, ver docs/correcciones_docente.md punto 1). full = dataset
+    # completo, es la configuracion que compite como mejor modelo por producto. Si el
+    # dataset no fue regenerado con las listas nuevas, cae a recommended_model_features.
+    feature_key = f"{feature_set}_model_features"
+    feature_columns = list(metadata.get(feature_key, metadata.get("recommended_model_features", [])))
 
     validate_dataset(df, feature_columns, target_column, date_column)
 
@@ -44,6 +52,7 @@ def load_product_dataset(config: ProductConfig) -> ProductDataset:
         feature_columns=feature_columns,
         target_column=target_column,
         date_column=date_column,
+        feature_set=feature_set,
     )
 
 

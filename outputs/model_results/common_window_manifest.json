@@ -1,0 +1,44 @@
+{
+  "papa_superchola": {
+    "product_id": "papa_superchola",
+    "models_available": [
+      "xgboost",
+      "lstm",
+      "arima"
+    ],
+    "common_test_rows": 71,
+    "dropped_rows_by_model": {
+      "xgboost": 5,
+      "lstm": 4,
+      "arima": 0
+    }
+  },
+  "tomate_rinon_invernadero": {
+    "product_id": "tomate_rinon_invernadero",
+    "models_available": [
+      "xgboost",
+      "lstm",
+      "arima"
+    ],
+    "common_test_rows": 98,
+    "dropped_rows_by_model": {
+      "xgboost": 0,
+      "lstm": 0,
+      "arima": 0
+    }
+  },
+  "maracuya": {
+    "product_id": "maracuya",
+    "models_available": [
+      "xgboost",
+      "lstm",
+      "arima"
+    ],
+    "common_test_rows": 83,
+    "dropped_rows_by_model": {
+      "xgboost": 0,
+      "lstm": 0,
+      "arima": 0
+    }
+  }
+}

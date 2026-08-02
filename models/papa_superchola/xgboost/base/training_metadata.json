@@ -1,0 +1,136 @@
+{
+  "product_id": "papa_superchola",
+  "product_name": "Papa Superchola",
+  "model_name": "xgboost",
+  "feature_set": "base",
+  "model_file": "models\\papa_superchola\\xgboost\\base\\model.joblib",
+  "target_column": "target_precio_mercado_usdkg",
+  "feature_columns": [
+    "provincia_id",
+    "mes_num",
+    "trimestre",
+    "mes_sin",
+    "mes_cos",
+    "target_lag_1",
+    "target_lag_2",
+    "target_lag_3",
+    "target_lag_6",
+    "target_lag_12",
+    "target_rolling_mean_3",
+    "target_rolling_std_3",
+    "target_rolling_mean_6",
+    "target_rolling_std_6",
+    "target_momentum_1_3",
+    "target_momentum_1_6"
+  ],
+  "train_rows": 286,
+  "test_rows": 76,
+  "holdout_test_ratio": 0.2,
+  "params": {
+    "n_estimators": 900,
+    "max_depth": 3,
+    "learning_rate": 0.015,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "min_child_weight": 2,
+    "reg_lambda": 2.0,
+    "objective": "reg:squarederror",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "tuning_results": [
+    {
+      "candidate": 0,
+      "validation_rmse_mean": 0.06563996488877726,
+      "validation_mae_mean": 0.05307616270851734,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 1,
+      "validation_rmse_mean": 0.06534749173770016,
+      "validation_mae_mean": 0.052822532168590945,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 700,
+        "max_depth": 3,
+        "learning_rate": 0.025,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 1,
+        "reg_lambda": 1.5,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 2,
+      "validation_rmse_mean": 0.06539389722590362,
+      "validation_mae_mean": 0.05215500193848249,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 2,
+        "learning_rate": 0.04,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "min_child_weight": 2,
+        "reg_lambda": 3.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 3,
+      "validation_rmse_mean": 0.06579945591529536,
+      "validation_mae_mean": 0.052695331201637545,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 350,
+        "max_depth": 2,
+        "learning_rate": 0.06,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "min_child_weight": 1,
+        "reg_lambda": 5.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 4,
+      "validation_rmse_mean": 0.06433548351313068,
+      "validation_mae_mean": 0.05166788995316838,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 900,
+        "max_depth": 3,
+        "learning_rate": 0.015,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "min_child_weight": 2,
+        "reg_lambda": 2.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    }
+  ],
+  "validation_rmse_mean": 0.06433548351313068,
+  "n_validation_windows": 3,
+  "enable_param_tuning": true,
+  "lag_blend_feature": "target_lag_1",
+  "lag_blend_weight": 0.2
+}

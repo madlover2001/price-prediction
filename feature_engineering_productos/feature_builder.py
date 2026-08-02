@@ -16,7 +16,10 @@ from data_sources import (
 
 
 TARGET_COLUMN = "target_precio_mercado_usdkg"
-LAG_FEATURES = [
+
+CALENDAR_FEATURES = ["mes_num", "trimestre", "mes_sin", "mes_cos"]
+
+TARGET_LAG_FEATURES = [
     "target_lag_1",
     "target_lag_2",
     "target_lag_3",
@@ -28,23 +31,9 @@ LAG_FEATURES = [
     "target_rolling_std_6",
     "target_momentum_1_3",
     "target_momentum_1_6",
-    "productor_lag_1",
-    "productor_lag_3",
-    "fertilizantes_lag_1",
-    "fertilizantes_lag_3",
-    "ipc_alimentos_lag_1",
-    "inflacion_mensual_lag_1",
-    "ibc_lag_1",
-    "ipm_lag_1",
-    "ipp_n_lag_1",
 ]
 
-RECOMMENDED_FEATURES = [
-    "provincia_id",
-    "mes_num",
-    "trimestre",
-    "mes_sin",
-    "mes_cos",
+EXOGENOUS_CONTEXT_FEATURES = [
     "mercados_observaciones",
     "mercados_distintos",
     "tipos_mercado_distintos",
@@ -65,7 +54,29 @@ RECOMMENDED_FEATURES = [
     "ibc",
     "ipm",
     "ipp_n",
-] + LAG_FEATURES
+]
+
+EXOGENOUS_LAG_FEATURES = [
+    "productor_lag_1",
+    "productor_lag_3",
+    "fertilizantes_lag_1",
+    "fertilizantes_lag_3",
+    "ipc_alimentos_lag_1",
+    "inflacion_mensual_lag_1",
+    "ibc_lag_1",
+    "ipm_lag_1",
+    "ipp_n_lag_1",
+]
+
+# "base" = solo historia propia del precio objetivo + calendario + identificador espacial.
+# "full" = base + variables exogenas verdaderas (productor, fertilizantes, macro/sectoriales)
+# contemporaneas y rezagadas. Esta separacion sostiene los experimentos de ablacion que miden
+# el aporte real de las exogenas (ver docs/correcciones_docente.md, punto 1).
+BASE_MODEL_FEATURES = ["provincia_id"] + CALENDAR_FEATURES + TARGET_LAG_FEATURES
+FULL_MODEL_FEATURES = BASE_MODEL_FEATURES + EXOGENOUS_CONTEXT_FEATURES + EXOGENOUS_LAG_FEATURES
+
+RECOMMENDED_FEATURES = FULL_MODEL_FEATURES
+LAG_FEATURES = TARGET_LAG_FEATURES + EXOGENOUS_LAG_FEATURES
 
 
 def _add_calendar_features(df: pd.DataFrame) -> pd.DataFrame:
@@ -86,7 +97,7 @@ def _fill_exogenous_features(df: pd.DataFrame) -> pd.DataFrame:
         filled["precio_productor_nacional_usdkg"]
     )
     filled["precio_productor_usdkg_filled"] = (
-        filled.groupby("provincia_key")["precio_productor_usdkg_filled"].transform(lambda s: s.ffill().bfill())
+        filled.groupby("provincia_key")["precio_productor_usdkg_filled"].transform(lambda s: s.ffill())
     )
     filled["precio_productor_provincia_usdkg"] = filled["precio_productor_provincia_usdkg"].fillna(
         filled["precio_productor_usdkg_filled"]
@@ -103,7 +114,7 @@ def _fill_exogenous_features(df: pd.DataFrame) -> pd.DataFrame:
     )
     filled["fertilizantes_precio_promedio_filled"] = filled.groupby("provincia_key")[
         "fertilizantes_precio_promedio_filled"
-    ].transform(lambda s: s.ffill().bfill())
+    ].transform(lambda s: s.ffill())
     filled["fertilizantes_precio_promedio_provincia"] = filled["fertilizantes_precio_promedio_provincia"].fillna(
         filled["fertilizantes_precio_promedio_filled"]
     )
@@ -131,8 +142,11 @@ def _fill_exogenous_features(df: pd.DataFrame) -> pd.DataFrame:
         "ipm",
         "ipp_n",
     ]
+    # ffill only: bfill would fill early gaps with a later (future) value, which is a
+    # look-ahead leak relative to the row's own date. Rows still missing after ffill
+    # (no observation yet exists) are dropped by the dropna in build_product_dataset.
     for column in national_fill_columns:
-        filled[column] = filled[column].ffill().bfill()
+        filled[column] = filled[column].ffill()
 
     return filled
 
@@ -237,6 +251,8 @@ def _build_metadata(
             "lag_features": LAG_FEATURES,
         },
         "recommended_model_features": RECOMMENDED_FEATURES,
+        "base_model_features": BASE_MODEL_FEATURES,
+        "full_model_features": FULL_MODEL_FEATURES,
         "missing_values_after_export": missing_counts,
     }
 

@@ -1,0 +1,84 @@
+﻿fecha,producto,provincia,y_true,y_pred,model_name,product_id,feature_set
+2024-05-01,Maracuya,Guayas,0.901111111111111,0.908345290382726,arima,maracuya,full
+2024-06-01,Maracuya,Guayas,0.914375,0.8766537556630862,arima,maracuya,full
+2024-07-01,Maracuya,Guayas,0.7913888888888889,0.8480954503066134,arima,maracuya,full
+2024-08-01,Maracuya,Guayas,0.7358333333333336,0.6956366603635578,arima,maracuya,full
+2024-09-01,Maracuya,Guayas,0.941875,0.6744478314905891,arima,maracuya,full
+2024-10-01,Maracuya,Guayas,0.795,0.7256608915501888,arima,maracuya,full
+2024-11-01,Maracuya,Guayas,0.855,0.6575620283889996,arima,maracuya,full
+2024-12-01,Maracuya,Guayas,0.8262499999999999,0.6768250956514716,arima,maracuya,full
+2025-01-01,Maracuya,Guayas,0.91875,0.6914528872387842,arima,maracuya,full
+2025-02-01,Maracuya,Guayas,0.888125,0.752866921710619,arima,maracuya,full
+2025-03-01,Maracuya,Guayas,0.784107142857143,0.7279624831602078,arima,maracuya,full
+2025-04-01,Maracuya,Guayas,0.7983333333333336,0.7728771763050115,arima,maracuya,full
+2025-05-01,Maracuya,Guayas,0.9444444444444444,0.8058345504671576,arima,maracuya,full
+2025-06-01,Maracuya,Guayas,0.9277731092436976,0.8047475681442438,arima,maracuya,full
+2025-07-01,Maracuya,Guayas,0.8528333333333333,0.7639235787790077,arima,maracuya,full
+2025-08-01,Maracuya,Guayas,0.618125,0.6276121254607114,arima,maracuya,full
+2025-09-01,Maracuya,Guayas,0.6620833333333334,0.6666988787381736,arima,maracuya,full
+2025-10-01,Maracuya,Guayas,0.830625,0.6596682053466483,arima,maracuya,full
+2025-11-01,Maracuya,Guayas,0.73875,0.6268540046671953,arima,maracuya,full
+2025-12-01,Maracuya,Guayas,0.6174999999999999,0.6488780611002629,arima,maracuya,full
+2026-01-01,Maracuya,Guayas,0.7174999999999999,0.6527678669500196,arima,maracuya,full
+2026-02-01,Maracuya,Guayas,0.8101785714285714,0.6203997053803363,arima,maracuya,full
+2025-03-01,Maracuya,Los Rios,0.92,0.9102680600878112,arima,maracuya,full
+2025-04-01,Maracuya,Los Rios,0.916666666666667,0.8792497941935997,arima,maracuya,full
+2025-05-01,Maracuya,Los Rios,0.946,0.9235337077144992,arima,maracuya,full
+2025-06-01,Maracuya,Los Rios,0.9411111111111112,0.9313456852524344,arima,maracuya,full
+2025-07-01,Maracuya,Los Rios,0.935,0.8002143033550537,arima,maracuya,full
+2025-08-01,Maracuya,Los Rios,0.9075,0.6984031078956014,arima,maracuya,full
+2025-09-01,Maracuya,Los Rios,0.9075,0.7785071972122546,arima,maracuya,full
+2025-10-01,Maracuya,Los Rios,0.935,0.7932492856524294,arima,maracuya,full
+2025-11-01,Maracuya,Los Rios,0.85,0.855287096978868,arima,maracuya,full
+2025-12-01,Maracuya,Los Rios,0.82,0.8674492326308172,arima,maracuya,full
+2026-01-01,Maracuya,Los Rios,0.8225,0.8898170831993106,arima,maracuya,full
+2026-02-01,Maracuya,Los Rios,0.92,0.8720998656674943,arima,maracuya,full
+2024-08-01,Maracuya,Manabí,0.52375,0.5482520829451272,arima,maracuya,full
+2024-09-01,Maracuya,Manabí,0.585625,0.5638653003611037,arima,maracuya,full
+2024-10-01,Maracuya,Manabí,0.6329166666666665,0.5872715379813463,arima,maracuya,full
+2024-11-01,Maracuya,Manabí,0.5598214285714285,0.5276188293502599,arima,maracuya,full
+2024-12-01,Maracuya,Manabí,0.6822222222222225,0.5561260936585375,arima,maracuya,full
+2025-01-01,Maracuya,Manabí,0.744375,0.668846528299091,arima,maracuya,full
+2025-02-01,Maracuya,Manabí,0.7875,0.7410324033477124,arima,maracuya,full
+2025-03-01,Maracuya,Manabí,0.522589285714286,0.642047308248899,arima,maracuya,full
+2025-04-01,Maracuya,Manabí,0.7005357142857145,0.6977721894411105,arima,maracuya,full
+2025-05-01,Maracuya,Manabí,0.7921428571428573,0.7883692634516957,arima,maracuya,full
+2025-06-01,Maracuya,Manabí,0.7983541666666667,0.8138813153068759,arima,maracuya,full
+2025-07-01,Maracuya,Manabí,0.7132638888888889,0.7166123172976997,arima,maracuya,full
+2025-08-01,Maracuya,Manabí,0.5744444444444444,0.5667746481869654,arima,maracuya,full
+2025-09-01,Maracuya,Manabí,0.5627777777777778,0.582277415264805,arima,maracuya,full
+2025-10-01,Maracuya,Manabí,0.52625,0.5902604797727713,arima,maracuya,full
+2025-11-01,Maracuya,Manabí,0.5871428571428572,0.5701848986397507,arima,maracuya,full
+2025-12-01,Maracuya,Manabí,0.4885714285714285,0.5517338335697053,arima,maracuya,full
+2026-01-01,Maracuya,Manabí,0.56,0.6659869506440942,arima,maracuya,full
+2026-02-01,Maracuya,Manabí,0.7321428571428572,0.640982418555665,arima,maracuya,full
+2025-04-01,Maracuya,Santa Elena,1.14666666666667,0.5820045712079083,arima,maracuya,full
+2025-05-01,Maracuya,Santa Elena,1.014,1.180799269827812,arima,maracuya,full
+2025-06-01,Maracuya,Santa Elena,1.0444444444444445,0.9915043172674267,arima,maracuya,full
+2025-07-01,Maracuya,Santa Elena,1.062,0.6406117811051736,arima,maracuya,full
+2025-08-01,Maracuya,Santa Elena,0.8425,0.5780126737770934,arima,maracuya,full
+2025-09-01,Maracuya,Santa Elena,0.8525,0.6281797286041557,arima,maracuya,full
+2025-10-01,Maracuya,Santa Elena,0.996,0.6338985772692916,arima,maracuya,full
+2025-11-01,Maracuya,Santa Elena,1.205,0.7873797123737251,arima,maracuya,full
+2025-12-01,Maracuya,Santa Elena,0.8033333333333333,0.5477350171509471,arima,maracuya,full
+2026-01-01,Maracuya,Santa Elena,0.792,0.853404221610119,arima,maracuya,full
+2026-02-01,Maracuya,Santa Elena,0.915,0.6070788914818113,arima,maracuya,full
+2024-08-01,Maracuya,Santo Domingo De Los Tsáchilas,0.722222222222222,0.7814704440816451,arima,maracuya,full
+2024-09-01,Maracuya,Santo Domingo De Los Tsáchilas,0.6525,0.8010782266836984,arima,maracuya,full
+2024-10-01,Maracuya,Santo Domingo De Los Tsáchilas,0.622222222222222,0.7546263390854497,arima,maracuya,full
+2024-11-01,Maracuya,Santo Domingo De Los Tsáchilas,0.57125,0.7453659195105482,arima,maracuya,full
+2024-12-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7525,0.8667608431287395,arima,maracuya,full
+2025-01-01,Maracuya,Santo Domingo De Los Tsáchilas,0.674285714285714,0.7952527398209753,arima,maracuya,full
+2025-02-01,Maracuya,Santo Domingo De Los Tsáchilas,0.75,0.811801112637235,arima,maracuya,full
+2025-03-01,Maracuya,Santo Domingo De Los Tsáchilas,0.668571428571429,0.8416451368074758,arima,maracuya,full
+2025-04-01,Maracuya,Santo Domingo De Los Tsáchilas,0.614285714285714,0.8086267103237058,arima,maracuya,full
+2025-05-01,Maracuya,Santo Domingo De Los Tsáchilas,0.741111111111111,0.9222674217882572,arima,maracuya,full
+2025-06-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7317647058823529,0.9019396076167018,arima,maracuya,full
+2025-07-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7150000000000001,0.8201820600603942,arima,maracuya,full
+2025-08-01,Maracuya,Santo Domingo De Los Tsáchilas,0.6975,0.789383304529652,arima,maracuya,full
+2025-09-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7577777777777778,0.8309402585969423,arima,maracuya,full
+2025-10-01,Maracuya,Santo Domingo De Los Tsáchilas,0.78125,0.8559353330862346,arima,maracuya,full
+2025-11-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7185714285714286,0.8210886074007913,arima,maracuya,full
+2025-12-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7400000000000001,0.8488259600274676,arima,maracuya,full
+2026-01-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7575,0.8896673052673943,arima,maracuya,full
+2026-02-01,Maracuya,Santo Domingo De Los Tsáchilas,0.722857142857143,0.826460474870511,arima,maracuya,full

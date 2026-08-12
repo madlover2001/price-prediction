@@ -120,9 +120,6 @@
     "target_rolling_std_6",
     "target_momentum_1_3",
     "target_momentum_1_6",
-    "mercados_observaciones",
-    "mercados_distintos",
-    "tipos_mercado_distintos",
     "precio_productor_provincia_usdkg",
     "precio_productor_nacional_usdkg",
     "precio_productor_usdkg_filled",
@@ -185,9 +182,6 @@
     "target_rolling_std_6",
     "target_momentum_1_3",
     "target_momentum_1_6",
-    "mercados_observaciones",
-    "mercados_distintos",
-    "tipos_mercado_distintos",
     "precio_productor_provincia_usdkg",
     "precio_productor_nacional_usdkg",
     "precio_productor_usdkg_filled",
@@ -215,5 +209,17 @@
     "ipm_lag_1",
     "ipp_n_lag_1"
   ],
-  "missing_values_after_export": {}
+  "missing_values_after_export": {},
+  "preprocessing_summary": {
+    "registros_iniciales": 466,
+    "registros_eliminados": 60,
+    "pct_eliminado": 12.88,
+    "productor_imputado": 83,
+    "pct_productor_imputado": 20.44,
+    "fertilizantes_imputado": 10,
+    "pct_fertilizantes_imputado": 2.46,
+    "macro_completado": 50,
+    "pct_macro_completado": 12.32,
+    "registros_finales": 406
+  }
 }

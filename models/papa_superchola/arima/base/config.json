@@ -59,148 +59,12 @@
         1
       ],
       "seasonal_order": [
-        1,
-        0,
-        1,
-        12
-      ],
-      "validation_rmse_mean": 0.0857467025633173,
-      "tuning_results": [
-        {
-          "order": [
-            1,
-            1,
-            1
-          ],
-          "seasonal_order": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "validation_rmse_mean": 0.08691745154073477,
-          "n_windows": 3
-        },
-        {
-          "order": [
-            1,
-            1,
-            1
-          ],
-          "seasonal_order": [
-            1,
-            0,
-            1,
-            12
-          ],
-          "validation_rmse_mean": 0.08748908269575507,
-          "n_windows": 3
-        },
-        {
-          "order": [
-            0,
-            1,
-            1
-          ],
-          "seasonal_order": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "validation_rmse_mean": 0.0878960067408502,
-          "n_windows": 3
-        },
-        {
-          "order": [
-            0,
-            1,
-            1
-          ],
-          "seasonal_order": [
-            1,
-            0,
-            1,
-            12
-          ],
-          "validation_rmse_mean": 0.0857467025633173,
-          "n_windows": 3
-        },
-        {
-          "order": [
-            1,
-            1,
-            0
-          ],
-          "seasonal_order": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "validation_rmse_mean": 0.08782397583560957,
-          "n_windows": 3
-        },
-        {
-          "order": [
-            1,
-            1,
-            0
-          ],
-          "seasonal_order": [
-            1,
-            0,
-            1,
-            12
-          ],
-          "validation_rmse_mean": 0.08689626626771185,
-          "n_windows": 3
-        },
-        {
-          "order": [
-            2,
-            1,
-            1
-          ],
-          "seasonal_order": [
-            0,
-            0,
-            0,
-            0
-          ],
-          "validation_rmse_mean": 0.08996253835232364,
-          "n_windows": 3
-        },
-        {
-          "order": [
-            2,
-            1,
-            1
-          ],
-          "seasonal_order": [
-            1,
-            0,
-            1,
-            12
-          ],
-          "validation_rmse_mean": 0.09433954308880588,
-          "n_windows": 3
-        }
-      ]
-    },
-    "Carchi": {
-      "order": [
-        0,
-        1,
-        1
-      ],
-      "seasonal_order": [
         0,
         0,
         0,
         0
       ],
-      "validation_rmse_mean": 0.1260614641697552,
+      "validation_rmse_mean": 0.15867108203044294,
       "tuning_results": [
         {
           "order": [
@@ -214,8 +78,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.25794236190537084,
-          "n_windows": 3
+          "validation_rmse_mean": 0.16105815743933732,
+          "n_windows": 2
         },
         {
           "order": [
@@ -229,8 +93,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.1606930948702768,
-          "n_windows": 3
+          "validation_rmse_mean": 0.1986758690062706,
+          "n_windows": 2
         },
         {
           "order": [
@@ -244,8 +108,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.1260614641697552,
-          "n_windows": 3
+          "validation_rmse_mean": 0.15867108203044294,
+          "n_windows": 2
         },
         {
           "order": [
@@ -259,8 +123,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.14947451794660738,
-          "n_windows": 3
+          "validation_rmse_mean": 0.19277796281162818,
+          "n_windows": 2
         },
         {
           "order": [
@@ -274,8 +138,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.14344054534999634,
-          "n_windows": 3
+          "validation_rmse_mean": 0.1732027417096846,
+          "n_windows": 2
         },
         {
           "order": [
@@ -289,8 +153,144 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.1725055834298487,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": 0.15932051017357357,
+          "n_windows": 2
+        },
+        {
+          "order": [
+            2,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": 0.21385718843680074,
+          "n_windows": 2
+        }
+      ]
+    },
+    "Carchi": {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "validation_rmse_mean": NaN,
+      "tuning_results": [
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
+        },
+        {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
+        },
+        {
+          "order": [
+            0,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
+        },
+        {
+          "order": [
+            1,
+            1,
+            0
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            12
+          ],
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -305,7 +305,7 @@
             0
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         },
         {
           "order": [
@@ -320,7 +320,7 @@
             12
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         }
       ]
     },
@@ -328,7 +328,7 @@
       "order": [
         1,
         1,
-        0
+        1
       ],
       "seasonal_order": [
         1,
@@ -336,7 +336,7 @@
         1,
         12
       ],
-      "validation_rmse_mean": 0.09383780771764492,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -350,8 +350,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.12001854271379862,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -365,8 +365,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.09892974728693284,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -380,8 +380,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.09839467885179783,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -395,8 +395,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.0956647380979168,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -410,8 +410,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.0982095773940026,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -425,8 +425,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.09383780771764492,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -440,8 +440,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.12286086604238416,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -455,24 +455,24 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.09499265920167617,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         }
       ]
     },
     "Cotopaxi": {
       "order": [
-        2,
+        1,
         1,
         1
       ],
       "seasonal_order": [
+        1,
         0,
-        0,
-        0,
-        0
+        1,
+        12
       ],
-      "validation_rmse_mean": 0.11582181487666292,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -486,8 +486,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.11686902351361488,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -501,8 +501,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.12441965264094994,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -516,8 +516,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.11704730070915503,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -531,8 +531,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.12997208770705013,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -546,8 +546,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.11779370888785794,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -561,8 +561,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.12232753209234491,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -576,8 +576,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.11582181487666292,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -592,13 +592,13 @@
             12
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         }
       ]
     },
     "Pichincha": {
       "order": [
-        2,
+        1,
         1,
         1
       ],
@@ -608,7 +608,7 @@
         0,
         0
       ],
-      "validation_rmse_mean": 0.09372707855232987,
+      "validation_rmse_mean": 0.13597964103115484,
       "tuning_results": [
         {
           "order": [
@@ -622,8 +622,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.09963721693234277,
-          "n_windows": 3
+          "validation_rmse_mean": 0.13597964103115484,
+          "n_windows": 2
         },
         {
           "order": [
@@ -637,8 +637,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.14349868013545006,
-          "n_windows": 3
+          "validation_rmse_mean": 0.18100362681257093,
+          "n_windows": 2
         },
         {
           "order": [
@@ -652,8 +652,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.10030377397462777,
-          "n_windows": 3
+          "validation_rmse_mean": 0.13981060367261267,
+          "n_windows": 2
         },
         {
           "order": [
@@ -667,8 +667,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.1118990916802305,
-          "n_windows": 3
+          "validation_rmse_mean": 0.1486582299279298,
+          "n_windows": 2
         },
         {
           "order": [
@@ -682,8 +682,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.10043349167073966,
-          "n_windows": 3
+          "validation_rmse_mean": 0.14119727807351495,
+          "n_windows": 2
         },
         {
           "order": [
@@ -697,8 +697,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.1097816387796902,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -712,8 +712,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.09372707855232987,
-          "n_windows": 3
+          "validation_rmse_mean": 0.1502070083524113,
+          "n_windows": 2
         },
         {
           "order": [
@@ -728,7 +728,7 @@
             12
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         }
       ]
     },
@@ -736,7 +736,7 @@
       "order": [
         1,
         1,
-        0
+        1
       ],
       "seasonal_order": [
         1,
@@ -744,7 +744,7 @@
         1,
         12
       ],
-      "validation_rmse_mean": 0.08329076941088294,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -758,8 +758,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.09901631292907041,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -773,8 +773,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.15261590185503798,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -788,8 +788,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.09604848189842885,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -803,8 +803,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.10647125165420386,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -818,8 +818,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.09070924828917931,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -833,8 +833,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.08329076941088294,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -848,8 +848,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.09951899181394343,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -863,14 +863,17 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.08365965360423454,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         }
       ]
     }
   },
   "min_observations": 24,
   "min_test_obs_for_province_conclusions": 5,
-  "validation_rmse_mean": 0.09974760621509887,
-  "province_metrics_file": "models\\papa_superchola\\arima\\base\\province_metrics.csv"
+  "validation_rmse_mean": 0.1473253615307989,
+  "operational_rmse_mean": 0.10153770089276393,
+  "n_validation_windows": 3,
+  "province_metrics_file": "models\\papa_superchola\\arima\\base\\province_metrics.csv",
+  "validation_predictions_file": "models\\papa_superchola\\arima\\base\\validation_predictions.csv"
 }

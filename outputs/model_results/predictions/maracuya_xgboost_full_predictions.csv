@@ -1,84 +1,84 @@
 ﻿fecha,producto,provincia,y_true,y_pred_raw,y_pred,model_name,product_id,feature_set
-2024-05-01,Maracuya,Guayas,0.901111111111111,0.9620631,0.9461504592895508,xgboost,maracuya,full
-2024-06-01,Maracuya,Guayas,0.914375,0.94251573,0.9342348069085015,xgboost,maracuya,full
-2024-07-01,Maracuya,Guayas,0.7913888888888889,0.9516892,0.9442263469696045,xgboost,maracuya,full
-2024-08-01,Maracuya,Guayas,0.7358333333333336,0.81226355,0.8080886283980475,xgboost,maracuya,full
-2024-08-01,Maracuya,Manabí,0.52375,0.67965114,0.6821653454568651,xgboost,maracuya,full
-2024-08-01,Maracuya,Santo Domingo De Los Tsáchilas,0.722222222222222,0.75944275,0.7637764195336236,xgboost,maracuya,full
-2024-09-01,Maracuya,Guayas,0.941875,0.90809745,0.8736446472803752,xgboost,maracuya,full
-2024-09-01,Maracuya,Manabí,0.585625,0.63788366,0.6150569543838501,xgboost,maracuya,full
-2024-09-01,Maracuya,Santo Domingo De Los Tsáchilas,0.6525,0.79868263,0.783390560415056,xgboost,maracuya,full
-2024-10-01,Maracuya,Guayas,0.795,1.0128778,0.9986772575378418,xgboost,maracuya,full
-2024-10-01,Maracuya,Manabí,0.6329166666666665,0.6093485,0.604603792667389,xgboost,maracuya,full
-2024-10-01,Maracuya,Santo Domingo De Los Tsáchilas,0.622222222222222,0.761492,0.7396936230659485,xgboost,maracuya,full
-2024-11-01,Maracuya,Guayas,0.855,0.89649576,0.8761966433525086,xgboost,maracuya,full
-2024-11-01,Maracuya,Manabí,0.5598214285714285,0.61036795,0.6148776963551839,xgboost,maracuya,full
-2024-11-01,Maracuya,Santo Domingo De Los Tsáchilas,0.57125,0.7418699,0.7179404094484116,xgboost,maracuya,full
-2024-12-01,Maracuya,Guayas,0.8262499999999999,0.95907354,0.9382588229179383,xgboost,maracuya,full
-2024-12-01,Maracuya,Manabí,0.6822222222222225,0.6408506,0.6246447566577367,xgboost,maracuya,full
-2024-12-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7525,0.6857646,0.6628617005348205,xgboost,maracuya,full
-2025-01-01,Maracuya,Guayas,0.91875,0.8767798,0.8666738238334656,xgboost,maracuya,full
-2025-01-01,Maracuya,Manabí,0.744375,0.7694614,0.7520135591295031,xgboost,maracuya,full
-2025-01-01,Maracuya,Santo Domingo De Los Tsáchilas,0.674285714285714,0.7191597,0.7258278136253357,xgboost,maracuya,full
-2025-02-01,Maracuya,Guayas,0.888125,1.0047644,0.9875615501403808,xgboost,maracuya,full
-2025-02-01,Maracuya,Manabí,0.7875,0.83393097,0.816019775390625,xgboost,maracuya,full
-2025-02-01,Maracuya,Santo Domingo De Los Tsáchilas,0.75,0.74748707,0.7328468212400163,xgboost,maracuya,full
-2025-03-01,Maracuya,Guayas,0.784107142857143,0.9791622,0.9609547848701477,xgboost,maracuya,full
-2025-03-01,Maracuya,Los Rios,0.92,0.9643463,0.9639770436286926,xgboost,maracuya,full
-2025-03-01,Maracuya,Manabí,0.522589285714286,0.756924,0.7630392026901245,xgboost,maracuya,full
-2025-03-01,Maracuya,Santo Domingo De Los Tsáchilas,0.668571428571429,0.7639331,0.7611465096473694,xgboost,maracuya,full
-2025-04-01,Maracuya,Guayas,0.7983333333333336,0.86821955,0.8513970959527153,xgboost,maracuya,full
-2025-04-01,Maracuya,Los Rios,0.916666666666667,0.97457343,0.9636587347984314,xgboost,maracuya,full
-2025-04-01,Maracuya,Manabí,0.7005357142857145,0.673478,0.6433002749170577,xgboost,maracuya,full
-2025-04-01,Maracuya,Santa Elena,1.14666666666667,1.115339,1.0882712206840515,xgboost,maracuya,full
-2025-04-01,Maracuya,Santo Domingo De Los Tsáchilas,0.614285714285714,0.74985874,0.7336012991496496,xgboost,maracuya,full
-2025-05-01,Maracuya,Guayas,0.9444444444444444,0.9304976,0.9040647241274516,xgboost,maracuya,full
-2025-05-01,Maracuya,Los Rios,0.946,0.97216785,0.9610676129659017,xgboost,maracuya,full
-2025-05-01,Maracuya,Manabí,0.7921428571428573,0.80370104,0.7830679892812457,xgboost,maracuya,full
-2025-05-01,Maracuya,Santa Elena,1.014,1.1153173,1.121587209065756,xgboost,maracuya,full
-2025-05-01,Maracuya,Santo Domingo De Los Tsáchilas,0.741111111111111,0.766881,0.7363619698796953,xgboost,maracuya,full
-2025-06-01,Maracuya,Guayas,0.9277731092436976,1.0026875,0.9910388403468662,xgboost,maracuya,full
-2025-06-01,Maracuya,Los Rios,0.9411111111111112,1.0486958,1.028156654071808,xgboost,maracuya,full
-2025-06-01,Maracuya,Manabí,0.7983541666666667,0.810158,0.8065549947874887,xgboost,maracuya,full
-2025-06-01,Maracuya,Santa Elena,1.0444444444444445,1.1194676,1.0983740928649903,xgboost,maracuya,full
-2025-06-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7317647058823529,0.7840681,0.7754767083062066,xgboost,maracuya,full
-2025-07-01,Maracuya,Guayas,0.8528333333333333,0.9798735,0.9694533926579131,xgboost,maracuya,full
-2025-07-01,Maracuya,Los Rios,0.935,0.99509144,0.984295360936059,xgboost,maracuya,full
-2025-07-01,Maracuya,Manabí,0.7132638888888889,0.8693816,0.8551761543591817,xgboost,maracuya,full
-2025-07-01,Maracuya,Santa Elena,1.062,1.1235311,1.1077137594752842,xgboost,maracuya,full
-2025-07-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7150000000000001,0.780215,0.7705249730558956,xgboost,maracuya,full
-2025-08-01,Maracuya,Guayas,0.618125,0.8611942,0.8595220332781474,xgboost,maracuya,full
-2025-08-01,Maracuya,Los Rios,0.9075,0.90835667,0.9136853451728821,xgboost,maracuya,full
-2025-08-01,Maracuya,Manabí,0.5744444444444444,0.6563737,0.6677517572508918,xgboost,maracuya,full
-2025-08-01,Maracuya,Santa Elena,0.8425,1.0597916,1.060233275794983,xgboost,maracuya,full
-2025-08-01,Maracuya,Santo Domingo De Los Tsáchilas,0.6975,0.7341058,0.7302846841812134,xgboost,maracuya,full
-2025-09-01,Maracuya,Guayas,0.6620833333333334,0.72657245,0.7048829989433288,xgboost,maracuya,full
-2025-09-01,Maracuya,Los Rios,0.9075,0.9116701,0.9108360829353332,xgboost,maracuya,full
-2025-09-01,Maracuya,Manabí,0.5627777777777778,0.6708411,0.6515617790751987,xgboost,maracuya,full
-2025-09-01,Maracuya,Santa Elena,0.8525,0.9515089,0.929707103729248,xgboost,maracuya,full
-2025-09-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7577777777777778,0.7434008,0.7342206616401672,xgboost,maracuya,full
-2025-10-01,Maracuya,Guayas,0.830625,0.7880146,0.7628283511797587,xgboost,maracuya,full
-2025-10-01,Maracuya,Los Rios,0.935,0.9296985,0.9252588572502136,xgboost,maracuya,full
-2025-10-01,Maracuya,Manabí,0.52625,0.6413248,0.6256154100630018,xgboost,maracuya,full
-2025-10-01,Maracuya,Santa Elena,0.996,0.8716477,0.8678181962966919,xgboost,maracuya,full
-2025-10-01,Maracuya,Santo Domingo De Los Tsáchilas,0.78125,0.76013625,0.7596645529005263,xgboost,maracuya,full
-2025-11-01,Maracuya,Guayas,0.73875,0.88681144,0.8755741720199585,xgboost,maracuya,full
-2025-11-01,Maracuya,Los Rios,0.85,0.95855397,0.9538431997299195,xgboost,maracuya,full
-2025-11-01,Maracuya,Manabí,0.5871428571428572,0.5784254,0.5679903318881989,xgboost,maracuya,full
-2025-11-01,Maracuya,Santa Elena,1.205,0.9525768,0.9612614767074585,xgboost,maracuya,full
-2025-11-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7185714285714286,0.78587186,0.7849475145339966,xgboost,maracuya,full
-2025-12-01,Maracuya,Guayas,0.6174999999999999,0.83523333,0.8159366645812989,xgboost,maracuya,full
-2025-12-01,Maracuya,Los Rios,0.82,0.9350925,0.9180739951133728,xgboost,maracuya,full
-2025-12-01,Maracuya,Manabí,0.4885714285714285,0.6342132,0.6247991625922067,xgboost,maracuya,full
-2025-12-01,Maracuya,Santa Elena,0.8033333333333333,0.98971874,1.0327749881744386,xgboost,maracuya,full
-2025-12-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7400000000000001,0.7863231,0.772772765977042,xgboost,maracuya,full
-2026-01-01,Maracuya,Guayas,0.7174999999999999,0.7820433,0.7491346106529235,xgboost,maracuya,full
-2026-01-01,Maracuya,Los Rios,0.8225,0.960324,0.9322592272758484,xgboost,maracuya,full
-2026-01-01,Maracuya,Manabí,0.56,0.6610339,0.6265414165088108,xgboost,maracuya,full
-2026-01-01,Maracuya,Santa Elena,0.792,1.0288635,0.983757517973582,xgboost,maracuya,full
-2026-01-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7575,0.84355986,0.8228479008674622,xgboost,maracuya,full
-2026-02-01,Maracuya,Guayas,0.8101785714285714,0.7538169,0.7465535101890564,xgboost,maracuya,full
-2026-02-01,Maracuya,Los Rios,0.92,0.93030816,0.9087465424537658,xgboost,maracuya,full
-2026-02-01,Maracuya,Manabí,0.7321428571428572,0.6660952,0.644876193523407,xgboost,maracuya,full
-2026-02-01,Maracuya,Santa Elena,0.915,0.9356984,0.9069587000846863,xgboost,maracuya,full
-2026-02-01,Maracuya,Santo Domingo De Los Tsáchilas,0.722857142857143,0.821127,0.8084015979766845,xgboost,maracuya,full
+2024-05-01,Maracuya,Guayas,0.901111111111111,0.9872203,0.9558041653633118,xgboost,maracuya,full
+2024-06-01,Maracuya,Guayas,0.914375,0.9329904,0.9234266117413839,xgboost,maracuya,full
+2024-07-01,Maracuya,Guayas,0.7913888888888889,0.9548002,0.9426726140975952,xgboost,maracuya,full
+2024-08-01,Maracuya,Guayas,0.7358333333333336,0.80297077,0.799496215502421,xgboost,maracuya,full
+2024-08-01,Maracuya,Manabí,0.52375,0.66565627,0.6736260368029278,xgboost,maracuya,full
+2024-08-01,Maracuya,Santo Domingo De Los Tsáchilas,0.722222222222222,0.73847103,0.7512630194028218,xgboost,maracuya,full
+2024-09-01,Maracuya,Guayas,0.941875,0.9036511,0.8533057827949524,xgboost,maracuya,full
+2024-09-01,Maracuya,Manabí,0.585625,0.66467345,0.6223964133262634,xgboost,maracuya,full
+2024-09-01,Maracuya,Santo Domingo De Los Tsáchilas,0.6525,0.79588276,0.7737846056620279,xgboost,maracuya,full
+2024-10-01,Maracuya,Guayas,0.795,0.9687352,0.960677152633667,xgboost,maracuya,full
+2024-10-01,Maracuya,Manabí,0.6329166666666665,0.6180433,0.6083178005218506,xgboost,maracuya,full
+2024-10-01,Maracuya,Santo Domingo De Los Tsáchilas,0.622222222222222,0.7358425,0.710839750289917,xgboost,maracuya,full
+2024-11-01,Maracuya,Guayas,0.855,0.87028486,0.8476994047164916,xgboost,maracuya,full
+2024-11-01,Maracuya,Manabí,0.5598214285714285,0.60586756,0.6139822833538054,xgboost,maracuya,full
+2024-11-01,Maracuya,Santo Domingo De Los Tsáchilas,0.57125,0.7349903,0.7011598936716714,xgboost,maracuya,full
+2024-12-01,Maracuya,Guayas,0.8262499999999999,0.91687256,0.8983107748031616,xgboost,maracuya,full
+2024-12-01,Maracuya,Manabí,0.6822222222222225,0.6662348,0.6343107824666159,xgboost,maracuya,full
+2024-12-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7525,0.67601365,0.64458455991745,xgboost,maracuya,full
+2025-01-01,Maracuya,Guayas,0.91875,0.8742496,0.8598497161865234,xgboost,maracuya,full
+2025-01-01,Maracuya,Manabí,0.744375,0.75057244,0.7300673648516338,xgboost,maracuya,full
+2025-01-01,Maracuya,Santo Domingo De Los Tsáchilas,0.674285714285714,0.7153921,0.7265244431495667,xgboost,maracuya,full
+2025-02-01,Maracuya,Guayas,0.888125,0.99574965,0.9726497626304627,xgboost,maracuya,full
+2025-02-01,Maracuya,Manabí,0.7875,0.82705843,0.8022533683776856,xgboost,maracuya,full
+2025-02-01,Maracuya,Santo Domingo De Los Tsáchilas,0.75,0.7686628,0.7403496576717921,xgboost,maracuya,full
+2025-03-01,Maracuya,Guayas,0.784107142857143,0.94370025,0.9270276718139648,xgboost,maracuya,full
+2025-03-01,Maracuya,Los Rios,0.92,0.98298514,0.9768396091461182,xgboost,maracuya,full
+2025-03-01,Maracuya,Manabí,0.522589285714286,0.76880056,0.7744103837013244,xgboost,maracuya,full
+2025-03-01,Maracuya,Santo Domingo De Los Tsáchilas,0.668571428571429,0.7672187,0.762053108215332,xgboost,maracuya,full
+2025-04-01,Maracuya,Guayas,0.7983333333333336,0.845831,0.8273138088498797,xgboost,maracuya,full
+2025-04-01,Maracuya,Los Rios,0.916666666666667,0.98239625,0.9636773834228516,xgboost,maracuya,full
+2025-04-01,Maracuya,Manabí,0.7005357142857145,0.6740084,0.6285826860495977,xgboost,maracuya,full
+2025-04-01,Maracuya,Santa Elena,1.14666666666667,1.1363041,1.0894128980636597,xgboost,maracuya,full
+2025-04-01,Maracuya,Santo Domingo De Los Tsáchilas,0.614285714285714,0.7540592,0.7284128773553032,xgboost,maracuya,full
+2025-05-01,Maracuya,Guayas,0.9444444444444444,0.9001393,0.869597508430481,xgboost,maracuya,full
+2025-05-01,Maracuya,Los Rios,0.946,0.99419665,0.9709376335144044,xgboost,maracuya,full
+2025-05-01,Maracuya,Manabí,0.7921428571428573,0.79058444,0.7635698138645718,xgboost,maracuya,full
+2025-05-01,Maracuya,Santa Elena,1.014,1.1040839,1.116858738899232,xgboost,maracuya,full
+2025-05-01,Maracuya,Santo Domingo De Los Tsáchilas,0.741111111111111,0.75626594,0.7136718770435877,xgboost,maracuya,full
+2025-06-01,Maracuya,Guayas,0.9277731092436976,0.9736918,0.9649175723393758,xgboost,maracuya,full
+2025-06-01,Maracuya,Los Rios,0.9411111111111112,1.032702,1.006691390323639,xgboost,maracuya,full
+2025-06-01,Maracuya,Manabí,0.7983541666666667,0.81106085,0.8053854432787214,xgboost,maracuya,full
+2025-06-01,Maracuya,Santa Elena,1.0444444444444445,1.1036556,1.076758867931366,xgboost,maracuya,full
+2025-06-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7317647058823529,0.7815341,0.769407174428304,xgboost,maracuya,full
+2025-07-01,Maracuya,Guayas,0.8528333333333333,0.94887614,0.942545232524391,xgboost,maracuya,full
+2025-07-01,Maracuya,Los Rios,0.935,0.99405015,0.978168446858724,xgboost,maracuya,full
+2025-07-01,Maracuya,Manabí,0.7132638888888889,0.84420395,0.8304489904403687,xgboost,maracuya,full
+2025-07-01,Maracuya,Santa Elena,1.062,1.1052278,1.086992801030477,xgboost,maracuya,full
+2025-07-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7150000000000001,0.78620124,0.7698702430444605,xgboost,maracuya,full
+2025-08-01,Maracuya,Guayas,0.618125,0.83230066,0.8384604283332824,xgboost,maracuya,full
+2025-08-01,Maracuya,Los Rios,0.9075,0.9118803,0.9188162140846252,xgboost,maracuya,full
+2025-08-01,Maracuya,Manabí,0.5744444444444444,0.64117503,0.6628016947905222,xgboost,maracuya,full
+2025-08-01,Maracuya,Santa Elena,0.8425,1.0718912,1.0689238320350647,xgboost,maracuya,full
+2025-08-01,Maracuya,Santo Domingo De Los Tsáchilas,0.6975,0.7221698,0.7200188536643982,xgboost,maracuya,full
+2025-09-01,Maracuya,Guayas,0.6620833333333334,0.7721369,0.7259333128929139,xgboost,maracuya,full
+2025-09-01,Maracuya,Los Rios,0.9075,0.93888617,0.9294703040122986,xgboost,maracuya,full
+2025-09-01,Maracuya,Manabí,0.5627777777777778,0.69408596,0.6581935022672017,xgboost,maracuya,full
+2025-09-01,Maracuya,Santa Elena,0.8525,1.0049229,0.9561959710121155,xgboost,maracuya,full
+2025-09-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7577777777777778,0.726562,0.7178433804512023,xgboost,maracuya,full
+2025-10-01,Maracuya,Guayas,0.830625,0.80191326,0.7599642591476441,xgboost,maracuya,full
+2025-10-01,Maracuya,Los Rios,0.935,0.9545095,0.940406623840332,xgboost,maracuya,full
+2025-10-01,Maracuya,Manabí,0.52625,0.64404213,0.6196628094514212,xgboost,maracuya,full
+2025-10-01,Maracuya,Santa Elena,0.996,0.9086279,0.8917895550727843,xgboost,maracuya,full
+2025-10-01,Maracuya,Santo Domingo De Los Tsáchilas,0.78125,0.7436231,0.7478694580396017,xgboost,maracuya,full
+2025-11-01,Maracuya,Guayas,0.73875,0.8793664,0.8647439785003662,xgboost,maracuya,full
+2025-11-01,Maracuya,Los Rios,0.85,0.986725,0.9712074451446533,xgboost,maracuya,full
+2025-11-01,Maracuya,Manabí,0.5871428571428572,0.59145886,0.5718961939811706,xgboost,maracuya,full
+2025-11-01,Maracuya,Santa Elena,1.205,0.97889334,0.9840253079414367,xgboost,maracuya,full
+2025-11-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7185714285714286,0.7703456,0.7736169099807739,xgboost,maracuya,full
+2025-12-01,Maracuya,Guayas,0.6174999999999999,0.83740824,0.8078107533454895,xgboost,maracuya,full
+2025-12-01,Maracuya,Los Rios,0.82,0.9416516,0.914156084060669,xgboost,maracuya,full
+2025-12-01,Maracuya,Manabí,0.4885714285714285,0.6312787,0.6180379248346601,xgboost,maracuya,full
+2025-12-01,Maracuya,Santa Elena,0.8033333333333333,0.9752172,1.0441520562171935,xgboost,maracuya,full
+2025-12-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7400000000000001,0.7542047,0.7435146820885794,xgboost,maracuya,full
+2026-01-01,Maracuya,Guayas,0.7174999999999999,0.7876011,0.7365707912445068,xgboost,maracuya,full
+2026-01-01,Maracuya,Los Rios,0.8225,0.9517544,0.9122280559539795,xgboost,maracuya,full
+2026-01-01,Maracuya,Manabí,0.56,0.6411872,0.5954024503571647,xgboost,maracuya,full
+2026-01-01,Maracuya,Santa Elena,0.792,1.0378877,0.967521372795105,xgboost,maracuya,full
+2026-01-01,Maracuya,Santo Domingo De Los Tsáchilas,0.7575,0.8124201,0.7906940550804138,xgboost,maracuya,full
+2026-02-01,Maracuya,Guayas,0.8101785714285714,0.7638361,0.7499352540969848,xgboost,maracuya,full
+2026-02-01,Maracuya,Los Rios,0.92,0.92067844,0.8912249236106873,xgboost,maracuya,full
+2026-02-01,Maracuya,Manabí,0.7321428571428572,0.6666436,0.6346505157947541,xgboost,maracuya,full
+2026-02-01,Maracuya,Santa Elena,0.915,0.96382254,0.9122757626533509,xgboost,maracuya,full
+2026-02-01,Maracuya,Santo Domingo De Los Tsáchilas,0.722857142857143,0.829773,0.8080911240577697,xgboost,maracuya,full

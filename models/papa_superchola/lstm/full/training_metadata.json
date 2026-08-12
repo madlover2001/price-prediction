@@ -24,9 +24,6 @@
     "target_rolling_std_6",
     "target_momentum_1_3",
     "target_momentum_1_6",
-    "mercados_observaciones",
-    "mercados_distintos",
-    "tipos_mercado_distintos",
     "precio_productor_provincia_usdkg",
     "precio_productor_nacional_usdkg",
     "precio_productor_usdkg_filled",
@@ -58,35 +55,74 @@
   "holdout_test_ratio": 0.2,
   "epochs": 120,
   "batch_size": 8,
-  "lstm_units": 64,
+  "lstm_units": 32,
   "learning_rate": 0.001,
   "verbose": 0,
-  "validation_rmse_mean": 0.08375325680606605,
-  "validation_windows_results": [
+  "hyperparam_grid": [
     {
-      "mae": 0.10954402361450524,
-      "rmse": 0.11918979706758374,
-      "mape": 24.803782597099378,
-      "r2": -0.6255558354520956,
-      "directional_accuracy": 0.5789473684210527,
-      "n_test": 58
+      "window_size": 6,
+      "lstm_units": 32
     },
     {
-      "mae": 0.045315159750836234,
-      "rmse": 0.05610014717168369,
-      "mape": 13.244196598186287,
-      "r2": 0.7876497150593591,
-      "directional_accuracy": 0.7108433734939759,
-      "n_test": 84
+      "window_size": 6,
+      "lstm_units": 64
     },
     {
-      "mae": 0.058175548281468134,
-      "rmse": 0.0759698261789307,
-      "mape": 15.272105378077608,
-      "r2": 0.36881409786210406,
-      "directional_accuracy": 0.8,
-      "n_test": 71
+      "window_size": 8,
+      "lstm_units": 32
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 64
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 32
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 64
     }
   ],
-  "n_validation_windows": 3
+  "hyperparam_tuning_results": [
+    {
+      "window_size": 6,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.11315358228883843,
+      "n_windows": 3
+    },
+    {
+      "window_size": 6,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.10657834701795203,
+      "n_windows": 3
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.07759318599397864,
+      "n_windows": 3
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.09205574314546792,
+      "n_windows": 3
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.10233322192657106,
+      "n_windows": 3
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.08874258342082612,
+      "n_windows": 3
+    }
+  ],
+  "validation_rmse_mean": 0.07759318599397864,
+  "operational_rmse_mean": 0.06637014796963472,
+  "validation_predictions_file": "models\\papa_superchola\\lstm\\full\\validation_predictions.csv"
 }

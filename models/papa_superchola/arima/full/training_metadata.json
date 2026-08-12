@@ -81,7 +81,7 @@
       "order": [
         1,
         1,
-        1
+        0
       ],
       "seasonal_order": [
         0,
@@ -89,7 +89,7 @@
         0,
         0
       ],
-      "validation_rmse_mean": 0.20251443506505853,
+      "validation_rmse_mean": 0.1941941850060039,
       "tuning_results": [
         {
           "order": [
@@ -103,8 +103,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.20251443506505853,
-          "n_windows": 3
+          "validation_rmse_mean": 0.1944132399150319,
+          "n_windows": 2
         },
         {
           "order": [
@@ -118,8 +118,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.20713618045660817,
-          "n_windows": 3
+          "validation_rmse_mean": 0.204210681448458,
+          "n_windows": 2
         },
         {
           "order": [
@@ -133,8 +133,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.20432827671192091,
-          "n_windows": 3
+          "validation_rmse_mean": 0.19435360707677024,
+          "n_windows": 2
         },
         {
           "order": [
@@ -148,8 +148,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.20819019910689154,
-          "n_windows": 3
+          "validation_rmse_mean": 0.2050484891677526,
+          "n_windows": 2
         },
         {
           "order": [
@@ -163,8 +163,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.20409187641148788,
-          "n_windows": 3
+          "validation_rmse_mean": 0.1941941850060039,
+          "n_windows": 2
         },
         {
           "order": [
@@ -178,8 +178,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.20642258721406756,
-          "n_windows": 3
+          "validation_rmse_mean": 0.21283184486790968,
+          "n_windows": 2
         },
         {
           "order": [
@@ -193,8 +193,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.20285458857631067,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -208,14 +208,14 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.2159874921961856,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         }
       ]
     },
     "Carchi": {
       "order": [
-        0,
+        1,
         1,
         1
       ],
@@ -225,7 +225,7 @@
         1,
         12
       ],
-      "validation_rmse_mean": 0.11049165763148718,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -239,8 +239,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.12846867796153827,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -254,8 +254,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.12667836015179237,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -269,8 +269,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.1288908937573155,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -284,8 +284,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.11049165763148718,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -299,8 +299,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.12893061731174835,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -314,8 +314,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.12875709066190308,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -329,8 +329,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.1705430793616003,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -344,14 +344,14 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.12545190619956412,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         }
       ]
     },
     "Chimborazo": {
       "order": [
-        2,
+        1,
         1,
         1
       ],
@@ -361,7 +361,7 @@
         1,
         12
       ],
-      "validation_rmse_mean": 0.18749136810551723,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -375,8 +375,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.19282368569628636,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -390,8 +390,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.18820725147896852,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -405,8 +405,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.18905526576167522,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -420,8 +420,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.19607751727421266,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -435,8 +435,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.18776081555850574,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -450,8 +450,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.1907328216024454,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -465,8 +465,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.1927140454287596,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -480,8 +480,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.18749136810551723,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         }
       ]
     },
@@ -492,12 +492,12 @@
         1
       ],
       "seasonal_order": [
+        1,
         0,
-        0,
-        0,
-        0
+        1,
+        12
       ],
-      "validation_rmse_mean": 0.06545073374539552,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -511,8 +511,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.06545073374539552,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -526,8 +526,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.07357292062922885,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -541,8 +541,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.0658168944495354,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -556,8 +556,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.06951111264829314,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -571,8 +571,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.06566668271054514,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -586,8 +586,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.07499946432696353,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -602,7 +602,7 @@
             0
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         },
         {
           "order": [
@@ -617,7 +617,7 @@
             12
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         }
       ]
     },
@@ -633,7 +633,7 @@
         0,
         0
       ],
-      "validation_rmse_mean": 0.2746352121043067,
+      "validation_rmse_mean": 0.1442598584029044,
       "tuning_results": [
         {
           "order": [
@@ -647,8 +647,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.44555755075069553,
-          "n_windows": 3
+          "validation_rmse_mean": 0.14664975286058718,
+          "n_windows": 2
         },
         {
           "order": [
@@ -662,8 +662,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "validation_rmse_mean": 0.1516758593241746,
+          "n_windows": 2
         },
         {
           "order": [
@@ -677,8 +677,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.2746352121043067,
-          "n_windows": 3
+          "validation_rmse_mean": 0.1442598584029044,
+          "n_windows": 2
         },
         {
           "order": [
@@ -692,8 +692,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.2919751550742344,
-          "n_windows": 3
+          "validation_rmse_mean": 0.1512155052032092,
+          "n_windows": 2
         },
         {
           "order": [
@@ -707,8 +707,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.2895969900888144,
-          "n_windows": 3
+          "validation_rmse_mean": 0.14494162074603012,
+          "n_windows": 2
         },
         {
           "order": [
@@ -722,8 +722,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.2908798354741116,
-          "n_windows": 3
+          "validation_rmse_mean": 0.15308370087905504,
+          "n_windows": 2
         },
         {
           "order": [
@@ -738,7 +738,7 @@
             0
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         },
         {
           "order": [
@@ -753,7 +753,7 @@
             12
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         }
       ]
     },
@@ -764,12 +764,12 @@
         1
       ],
       "seasonal_order": [
+        1,
         0,
-        0,
-        0,
-        0
+        1,
+        12
       ],
-      "validation_rmse_mean": 0.07994312437431587,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -783,8 +783,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.07994312437431587,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -798,8 +798,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.08048369726331996,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -813,8 +813,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.0806823036778436,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -828,8 +828,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.08126752742786404,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -843,8 +843,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.08073109905368393,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -858,8 +858,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.0803534584389362,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -873,8 +873,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.6512681482687597,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -888,14 +888,17 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.64903825846383,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         }
       ]
     }
   },
   "min_observations": 24,
   "min_test_obs_for_province_conclusions": 5,
-  "validation_rmse_mean": 0.15342108850434685,
-  "province_metrics_file": "models\\papa_superchola\\arima\\full\\province_metrics.csv"
+  "validation_rmse_mean": 0.16922702170445414,
+  "operational_rmse_mean": 0.11159319260750818,
+  "n_validation_windows": 3,
+  "province_metrics_file": "models\\papa_superchola\\arima\\full\\province_metrics.csv",
+  "validation_predictions_file": "models\\papa_superchola\\arima\\full\\validation_predictions.csv"
 }

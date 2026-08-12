@@ -18,7 +18,8 @@ from training.common.evaluation import run_common_window_evaluation
 from training.common.horizon_runner import run_horizon_evaluation
 from training.common.interpretability import run_xgboost_feature_importance
 from training.common.registry import rebuild_ablation_summary, rebuild_consolidated_results, selected_products
-from training.common.uncertainty import run_rmse_uncertainty
+from training.common.uncertainty import run_ablation_uncertainty, run_rmse_uncertainty
+from training.common.validation_common import run_common_validation_window_evaluation
 from training.lstm.train import train_product as train_lstm
 from training.xgboost.train import train_product as train_xgboost
 
@@ -83,8 +84,13 @@ def main() -> None:
                     if not args.continue_on_error:
                         raise
 
+    # Ventana comun de VALIDACION (C.3) primero: rebuild_consolidated_results ya lee
+    # operational_rmse_mean directo de cada metrics.json, pero common_validation_window.csv
+    # depende de que los validation_predictions.csv de los 3 modelos ya existan.
+    run_common_validation_window_evaluation()
     rebuild_consolidated_results()
     rebuild_ablation_summary()
+    run_ablation_uncertainty()
     run_common_window_evaluation()
     run_rmse_uncertainty()
     run_xgboost_feature_importance()

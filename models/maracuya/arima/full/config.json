@@ -78,17 +78,17 @@
   "selected_orders_by_province": {
     "Guayas": {
       "order": [
-        0,
+        1,
         1,
         1
       ],
       "seasonal_order": [
+        1,
         0,
-        0,
-        0,
-        0
+        1,
+        12
       ],
-      "validation_rmse_mean": 1.7205358863822398,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -103,7 +103,7 @@
             0
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         },
         {
           "order": [
@@ -118,7 +118,7 @@
             12
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         },
         {
           "order": [
@@ -132,8 +132,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 1.7205358863822398,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -147,8 +147,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 1.7473150649191318,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -162,8 +162,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 1.7556543611714874,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -177,8 +177,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 1.727947908102722,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -193,7 +193,7 @@
             0
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         },
         {
           "order": [
@@ -208,23 +208,23 @@
             12
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         }
       ]
     },
     "Los Rios": {
       "order": [
-        0,
+        1,
         1,
         1
       ],
       "seasonal_order": [
+        1,
         0,
-        0,
-        0,
-        0
+        1,
+        12
       ],
-      "validation_rmse_mean": 0.3912913365702944,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -239,7 +239,7 @@
             0
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         },
         {
           "order": [
@@ -254,7 +254,7 @@
             12
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         },
         {
           "order": [
@@ -268,8 +268,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.3912913365702944,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -283,8 +283,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.4208097021639652,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -298,8 +298,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.39194410495009335,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -313,8 +313,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.4152643791343562,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -329,7 +329,7 @@
             0
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         },
         {
           "order": [
@@ -344,7 +344,7 @@
             12
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         }
       ]
     },
@@ -352,15 +352,15 @@
       "order": [
         1,
         1,
-        0
+        1
       ],
       "seasonal_order": [
+        1,
         0,
-        0,
-        0,
-        0
+        1,
+        12
       ],
-      "validation_rmse_mean": 0.40138323994178204,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -374,8 +374,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.4020238494783632,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -389,8 +389,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.46929322400330903,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -404,8 +404,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.40275736877876106,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -419,8 +419,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.46071273195385115,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -434,8 +434,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.40138323994178204,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -449,8 +449,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.45071733602783554,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -465,7 +465,7 @@
             0
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         },
         {
           "order": [
@@ -480,7 +480,7 @@
             12
           ],
           "validation_rmse_mean": Infinity,
-          "n_windows": 3
+          "n_windows": 2
         }
       ]
     },
@@ -491,12 +491,12 @@
         1
       ],
       "seasonal_order": [
+        1,
         0,
-        0,
-        0,
-        0
+        1,
+        12
       ],
-      "validation_rmse_mean": 0.4196942029099124,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -510,7 +510,7 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.4196942029099124,
+          "validation_rmse_mean": Infinity,
           "n_windows": 3
         },
         {
@@ -525,7 +525,7 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.44734804443445286,
+          "validation_rmse_mean": Infinity,
           "n_windows": 3
         },
         {
@@ -540,7 +540,7 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.44144031455550053,
+          "validation_rmse_mean": Infinity,
           "n_windows": 3
         },
         {
@@ -555,7 +555,7 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.4459166272849961,
+          "validation_rmse_mean": Infinity,
           "n_windows": 3
         },
         {
@@ -570,7 +570,7 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.4315780349457136,
+          "validation_rmse_mean": Infinity,
           "n_windows": 3
         },
         {
@@ -585,7 +585,7 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.5225985831498948,
+          "validation_rmse_mean": Infinity,
           "n_windows": 3
         },
         {
@@ -600,7 +600,7 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.43027813569419654,
+          "validation_rmse_mean": Infinity,
           "n_windows": 3
         },
         {
@@ -615,14 +615,14 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.43052835802752315,
+          "validation_rmse_mean": Infinity,
           "n_windows": 3
         }
       ]
     },
     "Santo Domingo De Los Tsáchilas": {
       "order": [
-        0,
+        1,
         1,
         1
       ],
@@ -632,7 +632,7 @@
         1,
         12
       ],
-      "validation_rmse_mean": 0.5117380016326565,
+      "validation_rmse_mean": NaN,
       "tuning_results": [
         {
           "order": [
@@ -646,8 +646,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.526113461060073,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -661,8 +661,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.5774574538691549,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -676,8 +676,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.5169819130037723,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -691,8 +691,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.5117380016326565,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -706,8 +706,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.5408310523234293,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -721,8 +721,8 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.5642062304025436,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -736,8 +736,8 @@
             0,
             0
           ],
-          "validation_rmse_mean": 0.6159237278762446,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         },
         {
           "order": [
@@ -751,14 +751,17 @@
             1,
             12
           ],
-          "validation_rmse_mean": 0.555905302886859,
-          "n_windows": 3
+          "validation_rmse_mean": Infinity,
+          "n_windows": 2
         }
       ]
     }
   },
   "min_observations": 24,
   "min_test_obs_for_province_conclusions": 5,
-  "validation_rmse_mean": 0.6889285334873769,
-  "province_metrics_file": "models\\maracuya\\arima\\full\\province_metrics.csv"
+  "validation_rmse_mean": NaN,
+  "operational_rmse_mean": 0.20208965429023346,
+  "n_validation_windows": 3,
+  "province_metrics_file": "models\\maracuya\\arima\\full\\province_metrics.csv",
+  "validation_predictions_file": "models\\maracuya\\arima\\full\\validation_predictions.csv"
 }

@@ -24,9 +24,6 @@
     "target_rolling_std_6",
     "target_momentum_1_3",
     "target_momentum_1_6",
-    "mercados_observaciones",
-    "mercados_distintos",
-    "tipos_mercado_distintos",
     "precio_productor_provincia_usdkg",
     "precio_productor_nacional_usdkg",
     "precio_productor_usdkg_filled",
@@ -61,32 +58,71 @@
   "lstm_units": 64,
   "learning_rate": 0.001,
   "verbose": 0,
-  "validation_rmse_mean": 0.27703179868595873,
-  "validation_windows_results": [
+  "hyperparam_grid": [
     {
-      "mae": 0.18112272083759307,
-      "rmse": 0.2291417477785908,
-      "mape": 44.53923472433775,
-      "r2": -1.0183390467083684,
-      "directional_accuracy": 0.6891891891891891,
-      "n_test": 75
+      "window_size": 6,
+      "lstm_units": 32
     },
     {
-      "mae": 0.26395570507290167,
-      "rmse": 0.3272843708947986,
-      "mape": 37.02993186746506,
-      "r2": -2.062139387856311,
-      "directional_accuracy": 0.5,
-      "n_test": 109
+      "window_size": 6,
+      "lstm_units": 64
     },
     {
-      "mae": 0.21822514491421835,
-      "rmse": 0.2746692773844868,
-      "mape": 22.586170723172053,
-      "r2": -0.23127788616522205,
-      "directional_accuracy": 0.5542168674698795,
-      "n_test": 84
+      "window_size": 8,
+      "lstm_units": 32
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 64
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 32
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 64
     }
   ],
-  "n_validation_windows": 3
+  "hyperparam_tuning_results": [
+    {
+      "window_size": 6,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.4309638996040415,
+      "n_windows": 3
+    },
+    {
+      "window_size": 6,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.2638492098493343,
+      "n_windows": 3
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.30834817563034195,
+      "n_windows": 3
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.18829478453111162,
+      "n_windows": 3
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.3050066971795476,
+      "n_windows": 3
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.2245474157331865,
+      "n_windows": 3
+    }
+  ],
+  "validation_rmse_mean": 0.18829478453111162,
+  "operational_rmse_mean": 0.18468564966239562,
+  "validation_predictions_file": "models\\maracuya\\lstm\\full\\validation_predictions.csv"
 }

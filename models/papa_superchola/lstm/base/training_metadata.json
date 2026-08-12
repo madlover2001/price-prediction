@@ -29,35 +29,74 @@
   "holdout_test_ratio": 0.2,
   "epochs": 120,
   "batch_size": 8,
-  "lstm_units": 64,
+  "lstm_units": 32,
   "learning_rate": 0.001,
   "verbose": 0,
-  "validation_rmse_mean": 0.1223061711907006,
-  "validation_windows_results": [
+  "hyperparam_grid": [
     {
-      "mae": 0.11127968158187537,
-      "rmse": 0.1271567619938017,
-      "mape": 25.039884755893745,
-      "r2": -0.8501317290758021,
-      "directional_accuracy": 0.6666666666666666,
-      "n_test": 58
+      "window_size": 6,
+      "lstm_units": 32
     },
     {
-      "mae": 0.09827882947311514,
-      "rmse": 0.11674102816722857,
-      "mape": 28.03981897761183,
-      "r2": 0.08045735547814059,
-      "directional_accuracy": 0.4457831325301205,
-      "n_test": 84
+      "window_size": 6,
+      "lstm_units": 64
     },
     {
-      "mae": 0.10599036493771513,
-      "rmse": 0.12302072341107158,
-      "mape": 27.43817148579745,
-      "r2": -0.6551279693324326,
-      "directional_accuracy": 0.6428571428571429,
-      "n_test": 71
+      "window_size": 8,
+      "lstm_units": 32
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 64
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 32
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 64
     }
   ],
-  "n_validation_windows": 3
+  "hyperparam_tuning_results": [
+    {
+      "window_size": 6,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.11241239907319124,
+      "n_windows": 3
+    },
+    {
+      "window_size": 6,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.1336525290772295,
+      "n_windows": 3
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.10446613606861392,
+      "n_windows": 3
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.11482053099441493,
+      "n_windows": 3
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.12416758588538013,
+      "n_windows": 3
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.11280088401471568,
+      "n_windows": 3
+    }
+  ],
+  "validation_rmse_mean": 0.10446613606861392,
+  "operational_rmse_mean": 0.10681524119554697,
+  "validation_predictions_file": "models\\papa_superchola\\lstm\\base\\validation_predictions.csv"
 }

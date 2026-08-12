@@ -15,51 +15,48 @@ maracuya,Maracuya,base,target_momentum_1_3,0.009987960569560528,13.0
 maracuya,Maracuya,base,target_rolling_std_3,0.009879876859486103,14.0
 maracuya,Maracuya,base,mes_sin,0.009282606653869152,15.0
 maracuya,Maracuya,base,mes_cos,0.007794066797941923,16.0
-maracuya,Maracuya,full,target_lag_1,0.24213522672653198,1.0
-maracuya,Maracuya,full,target_rolling_mean_3,0.20179693400859833,2.0
-maracuya,Maracuya,full,target_rolling_mean_6,0.16694852709770203,3.0
-maracuya,Maracuya,full,precio_productor_nacional_usdkg,0.03719457983970642,4.0
-maracuya,Maracuya,full,ipc_alimentos_lag_1,0.03356831520795822,5.0
-maracuya,Maracuya,full,target_lag_2,0.02123258449137211,6.0
-maracuya,Maracuya,full,ipm,0.01958453096449375,7.0
-maracuya,Maracuya,full,fertilizantes_registros_provincia,0.018259208649396896,8.0
-maracuya,Maracuya,full,precio_productor_provincia_usdkg,0.017763635143637657,9.0
-maracuya,Maracuya,full,target_lag_12,0.016076261177659035,10.0
-maracuya,Maracuya,full,precio_productor_usdkg_filled,0.015921425074338913,11.0
-maracuya,Maracuya,full,provincia_id,0.015661822631955147,12.0
-maracuya,Maracuya,full,productor_lag_1,0.01351985801011324,13.0
-maracuya,Maracuya,full,ipp_n,0.012305445969104767,14.0
-maracuya,Maracuya,full,inflacion_anual,0.011588344350457191,15.0
-maracuya,Maracuya,full,inflacion_mensual,0.011411462910473347,16.0
-maracuya,Maracuya,full,ipp_n_lag_1,0.00929949153214693,17.0
-maracuya,Maracuya,full,fertilizantes_precio_promedio_provincia,0.008817302994430065,18.0
-maracuya,Maracuya,full,ipm_lag_1,0.008721974678337574,19.0
-maracuya,Maracuya,full,target_lag_6,0.008118389174342155,20.0
-maracuya,Maracuya,full,target_lag_3,0.008032512851059437,21.0
-maracuya,Maracuya,full,ipc_alimentos,0.00758701004087925,22.0
-maracuya,Maracuya,full,productor_lag_3,0.006812551524490118,23.0
-maracuya,Maracuya,full,target_momentum_1_3,0.006759160198271275,24.0
-maracuya,Maracuya,full,target_momentum_1_6,0.00645397650077939,25.0
-maracuya,Maracuya,full,mes_num,0.00634212139993906,26.0
-maracuya,Maracuya,full,ibc,0.006277950946241617,27.0
-maracuya,Maracuya,full,target_rolling_std_6,0.006235647480934858,28.0
-maracuya,Maracuya,full,target_rolling_std_3,0.005994037259370089,29.0
-maracuya,Maracuya,full,inflacion_acumulada,0.005955333821475506,30.0
-maracuya,Maracuya,full,mes_cos,0.005764280911535025,31.0
-maracuya,Maracuya,full,fertilizantes_lag_1,0.005547667387872934,32.0
-maracuya,Maracuya,full,inflacion_mensual_lag_1,0.005110209342092276,33.0
-maracuya,Maracuya,full,fertilizantes_precio_promedio_nacional,0.004961456637829542,34.0
-maracuya,Maracuya,full,mercados_observaciones,0.004738914780318737,35.0
-maracuya,Maracuya,full,trimestre,0.004618838429450989,36.0
-maracuya,Maracuya,full,fertilizantes_lag_3,0.00392547994852066,37.0
-maracuya,Maracuya,full,ibc_lag_1,0.003560436889529228,38.0
-maracuya,Maracuya,full,mes_sin,0.0028459294699132442,39.0
-maracuya,Maracuya,full,productor_missing_exact,0.0025512059219181538,40.0
-maracuya,Maracuya,full,mercados_distintos,0.0,41.0
-maracuya,Maracuya,full,tipos_mercado_distintos,0.0,42.0
-maracuya,Maracuya,full,fertilizantes_precio_promedio_filled,0.0,43.0
-maracuya,Maracuya,full,fertilizantes_ingredientes_activos_provincia,0.0,44.0
-maracuya,Maracuya,full,fertilizantes_missing_exact,0.0,45.0
+maracuya,Maracuya,full,target_rolling_mean_6,0.23582212626934052,1.0
+maracuya,Maracuya,full,target_lag_1,0.2199735939502716,2.0
+maracuya,Maracuya,full,target_rolling_mean_3,0.14264407753944397,3.0
+maracuya,Maracuya,full,precio_productor_nacional_usdkg,0.039638739079236984,4.0
+maracuya,Maracuya,full,target_lag_2,0.02547626942396164,5.0
+maracuya,Maracuya,full,ipc_alimentos_lag_1,0.02387983910739422,6.0
+maracuya,Maracuya,full,precio_productor_usdkg_filled,0.023845603689551353,7.0
+maracuya,Maracuya,full,fertilizantes_precio_promedio_filled,0.021393558010458946,8.0
+maracuya,Maracuya,full,provincia_id,0.019533412531018257,9.0
+maracuya,Maracuya,full,ipc_alimentos,0.016889844089746475,10.0
+maracuya,Maracuya,full,precio_productor_provincia_usdkg,0.016671815887093544,11.0
+maracuya,Maracuya,full,target_lag_3,0.015069050714373589,12.0
+maracuya,Maracuya,full,target_lag_12,0.013279556296765804,13.0
+maracuya,Maracuya,full,fertilizantes_lag_1,0.01185248140245676,14.0
+maracuya,Maracuya,full,ipp_n,0.011235447600483894,15.0
+maracuya,Maracuya,full,fertilizantes_precio_promedio_provincia,0.010988292284309864,16.0
+maracuya,Maracuya,full,ipp_n_lag_1,0.010919531807303429,17.0
+maracuya,Maracuya,full,fertilizantes_registros_provincia,0.010522241704165936,18.0
+maracuya,Maracuya,full,productor_lag_1,0.01039313618093729,19.0
+maracuya,Maracuya,full,mes_num,0.009660812094807625,20.0
+maracuya,Maracuya,full,target_lag_6,0.009507408365607262,21.0
+maracuya,Maracuya,full,inflacion_mensual,0.008389122784137726,22.0
+maracuya,Maracuya,full,inflacion_anual,0.008102481253445148,23.0
+maracuya,Maracuya,full,target_momentum_1_6,0.007455148734152317,24.0
+maracuya,Maracuya,full,ibc,0.00706715090200305,25.0
+maracuya,Maracuya,full,target_momentum_1_3,0.00669070053845644,26.0
+maracuya,Maracuya,full,ipm,0.0066756862215697765,27.0
+maracuya,Maracuya,full,target_rolling_std_6,0.00658765435218811,28.0
+maracuya,Maracuya,full,mes_cos,0.0064079854637384415,29.0
+maracuya,Maracuya,full,ipm_lag_1,0.006188207305967808,30.0
+maracuya,Maracuya,full,inflacion_acumulada,0.006132188718765974,31.0
+maracuya,Maracuya,full,productor_lag_3,0.006001202389597893,32.0
+maracuya,Maracuya,full,inflacion_mensual_lag_1,0.005433571524918079,33.0
+maracuya,Maracuya,full,target_rolling_std_3,0.005409811157733202,34.0
+maracuya,Maracuya,full,fertilizantes_precio_promedio_nacional,0.004353577271103859,35.0
+maracuya,Maracuya,full,fertilizantes_lag_3,0.0040302276611328125,36.0
+maracuya,Maracuya,full,ibc_lag_1,0.003526947693899274,37.0
+maracuya,Maracuya,full,mes_sin,0.002351459115743637,38.0
+maracuya,Maracuya,full,trimestre,0.0,39.0
+maracuya,Maracuya,full,productor_missing_exact,0.0,40.0
+maracuya,Maracuya,full,fertilizantes_ingredientes_activos_provincia,0.0,41.0
+maracuya,Maracuya,full,fertilizantes_missing_exact,0.0,42.0
 papa_superchola,Papa Superchola,base,target_lag_1,0.45242512226104736,1.0
 papa_superchola,Papa Superchola,base,target_rolling_mean_3,0.203327015042305,2.0
 papa_superchola,Papa Superchola,base,target_momentum_1_3,0.04904467239975929,3.0
@@ -76,51 +73,48 @@ papa_superchola,Papa Superchola,base,target_rolling_std_6,0.020179061219096184,1
 papa_superchola,Papa Superchola,base,target_lag_6,0.014895094558596611,14.0
 papa_superchola,Papa Superchola,base,mes_num,0.012322021648287773,15.0
 papa_superchola,Papa Superchola,base,trimestre,0.00921910535544157,16.0
-papa_superchola,Papa Superchola,full,target_lag_1,0.31344032287597656,1.0
-papa_superchola,Papa Superchola,full,target_rolling_mean_3,0.16458119451999664,2.0
-papa_superchola,Papa Superchola,full,precio_productor_nacional_usdkg,0.0944335013628006,3.0
-papa_superchola,Papa Superchola,full,precio_productor_provincia_usdkg,0.07004768401384354,4.0
-papa_superchola,Papa Superchola,full,target_rolling_mean_6,0.05961974337697029,5.0
-papa_superchola,Papa Superchola,full,provincia_id,0.03478743135929108,6.0
-papa_superchola,Papa Superchola,full,precio_productor_usdkg_filled,0.029848502948880196,7.0
-papa_superchola,Papa Superchola,full,mercados_observaciones,0.021372489631175995,8.0
-papa_superchola,Papa Superchola,full,target_lag_6,0.017735648900270462,9.0
-papa_superchola,Papa Superchola,full,ipm_lag_1,0.01699809543788433,10.0
-papa_superchola,Papa Superchola,full,target_lag_3,0.014435652643442154,11.0
-papa_superchola,Papa Superchola,full,inflacion_mensual_lag_1,0.012719402089715004,12.0
-papa_superchola,Papa Superchola,full,ibc,0.011954907327890396,13.0
-papa_superchola,Papa Superchola,full,ipm,0.010537689551711082,14.0
-papa_superchola,Papa Superchola,full,ipp_n_lag_1,0.010495608672499657,15.0
-papa_superchola,Papa Superchola,full,target_rolling_std_6,0.00914135854691267,16.0
-papa_superchola,Papa Superchola,full,target_momentum_1_3,0.007726214360445738,17.0
-papa_superchola,Papa Superchola,full,target_rolling_std_3,0.007700822781771421,18.0
-papa_superchola,Papa Superchola,full,target_lag_12,0.0075211189687252045,19.0
-papa_superchola,Papa Superchola,full,ipc_alimentos_lag_1,0.007362550124526024,20.0
-papa_superchola,Papa Superchola,full,inflacion_mensual,0.0070298886857926846,21.0
-papa_superchola,Papa Superchola,full,fertilizantes_lag_3,0.0063470578752458096,22.0
-papa_superchola,Papa Superchola,full,productor_lag_3,0.00575665570795536,23.0
-papa_superchola,Papa Superchola,full,fertilizantes_precio_promedio_filled,0.005543035920709372,24.0
-papa_superchola,Papa Superchola,full,target_momentum_1_6,0.005333260633051395,25.0
-papa_superchola,Papa Superchola,full,inflacion_anual,0.004778781905770302,26.0
-papa_superchola,Papa Superchola,full,mes_num,0.004726889077574015,27.0
-papa_superchola,Papa Superchola,full,fertilizantes_lag_1,0.004654701799154282,28.0
-papa_superchola,Papa Superchola,full,inflacion_acumulada,0.0044516874477267265,29.0
-papa_superchola,Papa Superchola,full,target_lag_2,0.0043334923684597015,30.0
-papa_superchola,Papa Superchola,full,ipc_alimentos,0.004055116791278124,31.0
-papa_superchola,Papa Superchola,full,productor_lag_1,0.003787008346989751,32.0
-papa_superchola,Papa Superchola,full,ipp_n,0.0037386000622063875,33.0
-papa_superchola,Papa Superchola,full,fertilizantes_precio_promedio_provincia,0.003544572042301297,34.0
-papa_superchola,Papa Superchola,full,trimestre,0.0030781493987888098,35.0
-papa_superchola,Papa Superchola,full,mes_sin,0.002697013085708022,36.0
-papa_superchola,Papa Superchola,full,fertilizantes_precio_promedio_nacional,0.0019288657931610942,37.0
-papa_superchola,Papa Superchola,full,ibc_lag_1,0.001755223609507084,38.0
-papa_superchola,Papa Superchola,full,mes_cos,0.0,39.0
-papa_superchola,Papa Superchola,full,mercados_distintos,0.0,40.0
-papa_superchola,Papa Superchola,full,tipos_mercado_distintos,0.0,41.0
-papa_superchola,Papa Superchola,full,productor_missing_exact,0.0,42.0
-papa_superchola,Papa Superchola,full,fertilizantes_registros_provincia,0.0,43.0
-papa_superchola,Papa Superchola,full,fertilizantes_ingredientes_activos_provincia,0.0,44.0
-papa_superchola,Papa Superchola,full,fertilizantes_missing_exact,0.0,45.0
+papa_superchola,Papa Superchola,full,target_lag_1,0.2958241105079651,1.0
+papa_superchola,Papa Superchola,full,target_rolling_mean_3,0.12665757536888123,2.0
+papa_superchola,Papa Superchola,full,productor_missing_exact,0.11098496615886688,3.0
+papa_superchola,Papa Superchola,full,precio_productor_nacional_usdkg,0.09057179093360901,4.0
+papa_superchola,Papa Superchola,full,precio_productor_provincia_usdkg,0.05647699534893036,5.0
+papa_superchola,Papa Superchola,full,precio_productor_usdkg_filled,0.05342531204223633,6.0
+papa_superchola,Papa Superchola,full,target_rolling_mean_6,0.047298599034547806,7.0
+papa_superchola,Papa Superchola,full,provincia_id,0.03212598338723183,8.0
+papa_superchola,Papa Superchola,full,ipc_alimentos_lag_1,0.014226619154214859,9.0
+papa_superchola,Papa Superchola,full,target_lag_3,0.013708404265344143,10.0
+papa_superchola,Papa Superchola,full,ipm_lag_1,0.01301109604537487,11.0
+papa_superchola,Papa Superchola,full,target_momentum_1_3,0.01090543158352375,12.0
+papa_superchola,Papa Superchola,full,target_lag_6,0.01046020444482565,13.0
+papa_superchola,Papa Superchola,full,ipp_n_lag_1,0.00923184398561716,14.0
+papa_superchola,Papa Superchola,full,target_rolling_std_3,0.00754779065027833,15.0
+papa_superchola,Papa Superchola,full,ipm,0.007244841195642948,16.0
+papa_superchola,Papa Superchola,full,fertilizantes_lag_3,0.0068773142993450165,17.0
+papa_superchola,Papa Superchola,full,target_rolling_std_6,0.006203406490385532,18.0
+papa_superchola,Papa Superchola,full,target_lag_12,0.006185015197843313,19.0
+papa_superchola,Papa Superchola,full,mes_cos,0.0056428685784339905,20.0
+papa_superchola,Papa Superchola,full,ibc,0.005617785733193159,21.0
+papa_superchola,Papa Superchola,full,target_momentum_1_6,0.00537095544859767,22.0
+papa_superchola,Papa Superchola,full,inflacion_anual,0.005340165458619595,23.0
+papa_superchola,Papa Superchola,full,fertilizantes_precio_promedio_nacional,0.005335917696356773,24.0
+papa_superchola,Papa Superchola,full,productor_lag_3,0.00509272888302803,25.0
+papa_superchola,Papa Superchola,full,fertilizantes_lag_1,0.004410199820995331,26.0
+papa_superchola,Papa Superchola,full,fertilizantes_precio_promedio_provincia,0.004208815284073353,27.0
+papa_superchola,Papa Superchola,full,productor_lag_1,0.004092898219823837,28.0
+papa_superchola,Papa Superchola,full,ipp_n,0.004022493027150631,29.0
+papa_superchola,Papa Superchola,full,inflacion_mensual,0.004005644470453262,30.0
+papa_superchola,Papa Superchola,full,ipc_alimentos,0.003968712408095598,31.0
+papa_superchola,Papa Superchola,full,inflacion_acumulada,0.003638674272224307,32.0
+papa_superchola,Papa Superchola,full,inflacion_mensual_lag_1,0.0033239941112697124,33.0
+papa_superchola,Papa Superchola,full,target_lag_2,0.003259498393163085,34.0
+papa_superchola,Papa Superchola,full,ibc_lag_1,0.0031370429787784815,35.0
+papa_superchola,Papa Superchola,full,mes_sin,0.0030239338520914316,36.0
+papa_superchola,Papa Superchola,full,fertilizantes_precio_promedio_filled,0.0030212686397135258,37.0
+papa_superchola,Papa Superchola,full,mes_num,0.002838405082002282,38.0
+papa_superchola,Papa Superchola,full,trimestre,0.0016806635539978743,39.0
+papa_superchola,Papa Superchola,full,fertilizantes_registros_provincia,0.0,40.0
+papa_superchola,Papa Superchola,full,fertilizantes_ingredientes_activos_provincia,0.0,41.0
+papa_superchola,Papa Superchola,full,fertilizantes_missing_exact,0.0,42.0
 tomate_rinon_invernadero,Tomate Rinon de Invernadero,base,provincia_id,0.4044373333454132,1.0
 tomate_rinon_invernadero,Tomate Rinon de Invernadero,base,target_rolling_mean_6,0.153443843126297,2.0
 tomate_rinon_invernadero,Tomate Rinon de Invernadero,base,target_lag_1,0.11462767422199249,3.0
@@ -137,48 +131,45 @@ tomate_rinon_invernadero,Tomate Rinon de Invernadero,base,target_rolling_std_6,0
 tomate_rinon_invernadero,Tomate Rinon de Invernadero,base,target_lag_2,0.016198908910155296,14.0
 tomate_rinon_invernadero,Tomate Rinon de Invernadero,base,target_lag_3,0.014953333884477615,15.0
 tomate_rinon_invernadero,Tomate Rinon de Invernadero,base,target_rolling_std_3,0.013578243553638458,16.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_rolling_mean_6,0.24080456793308258,1.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,provincia_id,0.1911783665418625,2.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,precio_productor_provincia_usdkg,0.10384133458137512,3.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,precio_productor_usdkg_filled,0.06819621473550797,4.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_lag_1,0.06358633935451508,5.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,precio_productor_nacional_usdkg,0.0615660697221756,6.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_rolling_mean_3,0.05508230999112129,7.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipm,0.022614160552620888,8.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipc_alimentos,0.019070468842983246,9.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,mercados_observaciones,0.011369149200618267,10.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_lag_12,0.01064751110970974,11.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,inflacion_mensual,0.010285606607794762,12.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ibc,0.009882251732051373,13.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,mes_cos,0.008306066505610943,14.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_precio_promedio_nacional,0.007060828153043985,15.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,trimestre,0.007054962683469057,16.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_momentum_1_3,0.007041820790618658,17.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,inflacion_mensual_lag_1,0.006768442690372467,18.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipp_n_lag_1,0.006631898693740368,19.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipc_alimentos_lag_1,0.006039407569915056,20.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_precio_promedio_filled,0.0059290979988873005,21.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,tipos_mercado_distintos,0.005476321559399366,22.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,mercados_distintos,0.004582204390317202,23.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,productor_lag_1,0.004360530059784651,24.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_registros_provincia,0.0039037810638546944,25.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_momentum_1_6,0.003847869113087654,26.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,mes_num,0.003777394536882639,27.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_missing_exact,0.0037302584387362003,28.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_lag_1,0.003636112669482827,29.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_lag_2,0.0035184079315513372,30.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_lag_6,0.0034865448251366615,31.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_lag_3,0.003436243860051036,32.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ibc_lag_1,0.0033124678302556276,33.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,productor_lag_3,0.00325370323844254,34.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipp_n,0.0032015929464250803,35.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipm_lag_1,0.003174327313899994,36.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_precio_promedio_provincia,0.0030724413227289915,37.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,inflacion_acumulada,0.0029726382344961166,38.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_lag_3,0.002919343765825033,39.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_rolling_std_3,0.0027475899551063776,40.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,productor_missing_exact,0.002551016164943576,41.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_rolling_std_6,0.002484471770003438,42.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,inflacion_anual,0.002395882271230221,43.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,mes_sin,0.0012020559515804052,44.0
-tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_ingredientes_activos_provincia,0.0,45.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_rolling_mean_6,0.2596433162689209,1.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,provincia_id,0.175876647233963,2.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,precio_productor_usdkg_filled,0.11611796915531158,3.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,precio_productor_provincia_usdkg,0.09672851115465164,4.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,precio_productor_nacional_usdkg,0.06237148120999336,5.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_lag_1,0.05548830330371857,6.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_rolling_mean_3,0.04524028301239014,7.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipm,0.024044685065746307,8.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipc_alimentos,0.015880055725574493,9.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,inflacion_mensual,0.010464250110089779,10.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ibc,0.009742685593664646,11.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_lag_12,0.009270732291042805,12.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,mes_cos,0.008733830414712429,13.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_lag_6,0.00786720309406519,14.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,inflacion_mensual_lag_1,0.007364781107753515,15.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,trimestre,0.006769414059817791,16.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipp_n_lag_1,0.006468326784670353,17.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipc_alimentos_lag_1,0.0055601270869374275,18.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,mes_num,0.005560058169066906,19.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_precio_promedio_nacional,0.005236517172306776,20.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipp_n,0.004289995413273573,21.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_lag_3,0.004274473525583744,22.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,inflacion_anual,0.004094064235687256,23.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_lag_2,0.004090234637260437,24.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,productor_lag_1,0.003910395782440901,25.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_registros_provincia,0.0037851152010262012,26.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ipm_lag_1,0.003770198905840516,27.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_momentum_1_6,0.0037069704849272966,28.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_lag_3,0.0036652388516813517,29.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,productor_lag_3,0.003477421822026372,30.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,ibc_lag_1,0.0033485323656350374,31.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,productor_missing_exact,0.003073349827900529,32.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_precio_promedio_provincia,0.0030465361196547747,33.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,inflacion_acumulada,0.0030423987191170454,34.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_momentum_1_3,0.0029686482157558203,35.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_lag_1,0.0028668821323662996,36.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_rolling_std_6,0.002504240721464157,37.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,target_rolling_std_3,0.0023598766420036554,38.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,mes_sin,0.002245111856609583,39.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_precio_promedio_filled,0.0010511244181543589,40.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_ingredientes_activos_provincia,0.0,41.0
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,full,fertilizantes_missing_exact,0.0,42.0

@@ -1,0 +1,175 @@
+﻿fecha,y_true,y_pred,producto,provincia,model_name,product_id,feature_set
+2019-02-01,0.789166666666667,0.7134565262816635,Maracuya,Guayas,arima,maracuya,base
+2019-03-01,0.810833333333333,0.6803251115404304,Maracuya,Guayas,arima,maracuya,base
+2019-04-01,0.822307692307692,0.6678629575294481,Maracuya,Guayas,arima,maracuya,base
+2019-05-01,0.836923076923077,0.6631754039249182,Maracuya,Guayas,arima,maracuya,base
+2019-06-01,0.915384615384616,0.6614122128444696,Maracuya,Guayas,arima,maracuya,base
+2019-07-01,0.876153846153846,0.6607490006343374,Maracuya,Guayas,arima,maracuya,base
+2019-08-01,0.745714285714286,0.6604995379183869,Maracuya,Guayas,arima,maracuya,base
+2019-09-01,0.69,0.6604057042318252,Maracuya,Guayas,arima,maracuya,base
+2019-10-01,0.698571428571429,0.6603704093353506,Maracuya,Guayas,arima,maracuya,base
+2019-11-01,0.6775,0.6603571334025508,Maracuya,Guayas,arima,maracuya,base
+2019-12-01,0.737272727272727,0.6603521397516462,Maracuya,Guayas,arima,maracuya,base
+2020-01-01,0.748461538461538,0.6603502614241695,Maracuya,Guayas,arima,maracuya,base
+2020-02-01,0.706666666666667,0.660349554904195,Maracuya,Guayas,arima,maracuya,base
+2020-03-01,0.6148076923076925,0.6603492891515611,Maracuya,Guayas,arima,maracuya,base
+2020-04-01,0.7016346153846155,0.6603491891905339,Maracuya,Guayas,arima,maracuya,base
+2020-05-01,0.6835384615384614,0.6603491515908803,Maracuya,Guayas,arima,maracuya,base
+2020-06-01,0.6626923076923075,0.6603491374480289,Maracuya,Guayas,arima,maracuya,base
+2020-07-01,0.6156153846153845,0.6603491321282926,Maracuya,Guayas,arima,maracuya,base
+2020-08-01,0.5816346153846155,0.6603491301273103,Maracuya,Guayas,arima,maracuya,base
+2020-09-01,0.566153846153846,0.6603491293746546,Maracuya,Guayas,arima,maracuya,base
+2020-10-01,0.527857142857143,0.6603491290915483,Maracuya,Guayas,arima,maracuya,base
+2020-11-01,0.5061363636363635,0.6603491289850598,Maracuya,Guayas,arima,maracuya,base
+2020-12-01,0.491025641025641,0.6603491289450049,Maracuya,Guayas,arima,maracuya,base
+2021-01-01,0.4574999999999999,0.6603491289299385,Maracuya,Guayas,arima,maracuya,base
+2021-02-01,0.4286363636363635,0.6603491289242713,Maracuya,Guayas,arima,maracuya,base
+2021-03-01,0.5247115384615385,0.4555262181916662,Maracuya,Guayas,arima,maracuya,base
+2021-04-01,0.5134615384615385,0.4653582201517412,Maracuya,Guayas,arima,maracuya,base
+2021-05-01,0.6074999999999999,0.4689531917178427,Maracuya,Guayas,arima,maracuya,base
+2021-06-01,0.58125,0.47026765652506697,Maracuya,Guayas,arima,maracuya,base
+2021-07-01,0.5317142857142855,0.4707482772191841,Maracuya,Guayas,arima,maracuya,base
+2021-08-01,0.4373076923076925,0.47092401129007294,Maracuya,Guayas,arima,maracuya,base
+2021-09-01,0.5014423076923076,0.47098826666660826,Maracuya,Guayas,arima,maracuya,base
+2021-10-01,0.538173076923077,0.47101176099182823,Maracuya,Guayas,arima,maracuya,base
+2021-11-01,0.5254166666666665,0.47102035145300525,Maracuya,Guayas,arima,maracuya,base
+2021-12-01,0.5579166666666665,0.47102349246780534,Maracuya,Guayas,arima,maracuya,base
+2022-01-01,0.50875,0.47102464094793595,Maracuya,Guayas,arima,maracuya,base
+2022-02-01,0.62,0.47102506087802043,Maracuya,Guayas,arima,maracuya,base
+2022-03-01,0.5941346153846154,0.4710252144211869,Maracuya,Guayas,arima,maracuya,base
+2022-04-01,0.5762499999999999,0.4710252705626848,Maracuya,Guayas,arima,maracuya,base
+2022-05-01,0.64375,0.47102529109025276,Maracuya,Guayas,arima,maracuya,base
+2022-06-01,0.72,0.4710252985959493,Maracuya,Guayas,arima,maracuya,base
+2022-07-01,0.7693846153846156,0.471025301340331,Maracuya,Guayas,arima,maracuya,base
+2022-08-01,0.6641666666666666,0.47102530234378626,Maracuya,Guayas,arima,maracuya,base
+2022-09-01,0.7663333333333335,0.4710253027106895,Maracuya,Guayas,arima,maracuya,base
+2022-10-01,0.815,0.4710253028448439,Maracuya,Guayas,arima,maracuya,base
+2022-11-01,0.7536666666666665,0.4710253028938961,Maracuya,Guayas,arima,maracuya,base
+2022-12-01,0.6966666666666665,0.47102530291183153,Maracuya,Guayas,arima,maracuya,base
+2023-01-01,0.6995454545454545,0.47102530291838945,Maracuya,Guayas,arima,maracuya,base
+2023-02-01,0.7404545454545455,0.4710253029207873,Maracuya,Guayas,arima,maracuya,base
+2023-03-01,0.8782692307692299,0.47102530292166406,Maracuya,Guayas,arima,maracuya,base
+2019-02-01,0.48,0.42328750978834995,Maracuya,Manabí,arima,maracuya,base
+2019-03-01,0.37375,0.4797977486268553,Maracuya,Manabí,arima,maracuya,base
+2019-04-01,0.4375,0.4471994848762555,Maracuya,Manabí,arima,maracuya,base
+2019-05-01,0.405714285714286,0.4660039851118764,Maracuya,Manabí,arima,maracuya,base
+2019-06-01,0.42,0.4551564985151413,Maracuya,Manabí,arima,maracuya,base
+2019-07-01,0.448888888888889,0.46141393497939,Maracuya,Manabí,arima,maracuya,base
+2019-08-01,0.3275,0.4578042959395137,Maracuya,Manabí,arima,maracuya,base
+2019-09-01,0.18,0.45988653745688934,Maracuya,Manabí,arima,maracuya,base
+2019-10-01,0.221428571428571,0.4586853841867742,Maracuya,Manabí,arima,maracuya,base
+2019-11-01,0.221428571428571,0.459378276517596,Maracuya,Manabí,arima,maracuya,base
+2019-12-01,0.18,0.45897857749994636,Maracuya,Manabí,arima,maracuya,base
+2020-01-01,0.227777777777778,0.45920914622989695,Maracuya,Manabí,arima,maracuya,base
+2020-02-01,0.235714285714286,0.45907614130147945,Maracuya,Manabí,arima,maracuya,base
+2020-03-01,0.4086249999999999,0.4591528659769683,Maracuya,Manabí,arima,maracuya,base
+2020-04-01,0.459375,0.4591086068965048,Maracuya,Manabí,arima,maracuya,base
+2020-05-01,0.3677777777777775,0.4591341380074674,Maracuya,Manabí,arima,maracuya,base
+2020-06-01,0.4444444444444445,0.459119410235897,Maracuya,Manabí,arima,maracuya,base
+2020-07-01,0.4605555555555555,0.45912790603757786,Maracuya,Manabí,arima,maracuya,base
+2020-08-01,0.39625,0.4591230051843934,Maracuya,Manabí,arima,maracuya,base
+2020-09-01,0.3560416666666665,0.45912583227038695,Maracuya,Manabí,arima,maracuya,base
+2020-10-01,0.4088888888888889,0.4591242014491985,Maracuya,Manabí,arima,maracuya,base
+2020-11-01,0.3892857142857144,0.459125142197996,Maracuya,Manabí,arima,maracuya,base
+2020-12-01,0.4369642857142854,0.4591245995215173,Maracuya,Manabí,arima,maracuya,base
+2021-01-01,0.45625,0.4591249125676368,Maracuya,Manabí,arima,maracuya,base
+2021-02-01,0.3785714285714285,0.459124731985141,Maracuya,Manabí,arima,maracuya,base
+2021-03-01,0.3844444444444445,0.46172487924237493,Maracuya,Manabí,arima,maracuya,base
+2021-04-01,0.356875,0.4869663131295917,Maracuya,Manabí,arima,maracuya,base
+2021-05-01,0.365,0.44116237518929435,Maracuya,Manabí,arima,maracuya,base
+2021-06-01,0.3936805555555555,0.47949542991428246,Maracuya,Manabí,arima,maracuya,base
+2021-07-01,0.4305555555555554,0.4802823906618763,Maracuya,Manabí,arima,maracuya,base
+2021-08-01,0.34625,0.4778618085388261,Maracuya,Manabí,arima,maracuya,base
+2021-09-01,0.356875,0.5002222435145498,Maracuya,Manabí,arima,maracuya,base
+2021-10-01,0.363125,0.5216441481644555,Maracuya,Manabí,arima,maracuya,base
+2021-11-01,0.359375,0.5085753995760147,Maracuya,Manabí,arima,maracuya,base
+2021-12-01,0.3992857142857144,0.5541704840346302,Maracuya,Manabí,arima,maracuya,base
+2022-01-01,0.407777777777778,0.55110174328219,Maracuya,Manabí,arima,maracuya,base
+2022-02-01,0.4526785714285715,0.4966706811374938,Maracuya,Manabí,arima,maracuya,base
+2022-03-01,0.425625,0.4944695112101727,Maracuya,Manabí,arima,maracuya,base
+2022-04-01,0.419375,0.49438049883151053,Maracuya,Manabí,arima,maracuya,base
+2022-05-01,0.5257142857142856,0.494376894011383,Maracuya,Manabí,arima,maracuya,base
+2022-06-01,0.516875,0.4943767526790476,Maracuya,Manabí,arima,maracuya,base
+2022-07-01,0.5161111111111115,0.4943767468791651,Maracuya,Manabí,arima,maracuya,base
+2022-08-01,0.52,0.4943767463733067,Maracuya,Manabí,arima,maracuya,base
+2022-09-01,0.5478888888888891,0.4943767488374393,Maracuya,Manabí,arima,maracuya,base
+2022-10-01,0.5891666666666665,0.49437675120697927,Maracuya,Manabí,arima,maracuya,base
+2022-11-01,0.557857142857143,0.49437674976115326,Maracuya,Manabí,arima,maracuya,base
+2022-12-01,0.5288392857142855,0.4943767548053879,Maracuya,Manabí,arima,maracuya,base
+2023-01-01,0.6783333333333335,0.49437675446588963,Maracuya,Manabí,arima,maracuya,base
+2023-02-01,0.7985714285714289,0.4943767484441203,Maracuya,Manabí,arima,maracuya,base
+2023-03-01,0.74875,0.4943767482006024,Maracuya,Manabí,arima,maracuya,base
+2023-04-01,1.02666666666667,1.0489032074619078,Maracuya,Santa Elena,arima,maracuya,base
+2023-05-01,0.7425,1.2424504346108363,Maracuya,Santa Elena,arima,maracuya,base
+2023-06-01,1.218,0.9367064387327533,Maracuya,Santa Elena,arima,maracuya,base
+2023-07-01,1.235,0.9866244881488722,Maracuya,Santa Elena,arima,maracuya,base
+2023-08-01,1.044,1.0121688141878973,Maracuya,Santa Elena,arima,maracuya,base
+2023-09-01,1.044,1.0837700249269426,Maracuya,Santa Elena,arima,maracuya,base
+2023-10-01,1.044,1.2146346847206992,Maracuya,Santa Elena,arima,maracuya,base
+2023-11-01,1.044,0.9780754539173442,Maracuya,Santa Elena,arima,maracuya,base
+2023-12-01,1.044,1.0057725884084519,Maracuya,Santa Elena,arima,maracuya,base
+2024-01-01,1.044,1.0057763266802247,Maracuya,Santa Elena,arima,maracuya,base
+2024-02-01,1.11,1.2327794793874811,Maracuya,Santa Elena,arima,maracuya,base
+2024-03-01,1.1,1.2327994876325192,Maracuya,Santa Elena,arima,maracuya,base
+2024-04-01,1.1125,1.1585538941149829,Maracuya,Santa Elena,arima,maracuya,base
+2024-05-01,1.1,1.282338223849955,Maracuya,Santa Elena,arima,maracuya,base
+2024-06-01,1.1,1.086797226765283,Maracuya,Santa Elena,arima,maracuya,base
+2024-07-01,1.14,1.1187227133914424,Maracuya,Santa Elena,arima,maracuya,base
+2024-08-01,1.228,1.1350597918158045,Maracuya,Santa Elena,arima,maracuya,base
+2024-09-01,1.285,1.1808529196039548,Maracuya,Santa Elena,arima,maracuya,base
+2024-10-01,1.3475,1.2645484608962319,Maracuya,Santa Elena,arima,maracuya,base
+2024-11-01,1.385,1.113255110186826,Maracuya,Santa Elena,arima,maracuya,base
+2024-12-01,1.54,1.1309690343823762,Maracuya,Santa Elena,arima,maracuya,base
+2025-01-01,1.075,1.1309714252240288,Maracuya,Santa Elena,arima,maracuya,base
+2025-02-01,1.4125,1.27615310965054,Maracuya,Santa Elena,arima,maracuya,base
+2025-03-01,0.98,1.2761659060839041,Maracuya,Santa Elena,arima,maracuya,base
+2019-02-01,0.54375,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2019-03-01,0.501428571428571,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2019-04-01,0.482222222222222,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2019-05-01,0.586666666666667,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2019-06-01,0.45625,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2019-07-01,0.561111111111111,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2019-08-01,0.49,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2019-09-01,0.502857142857143,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2019-10-01,0.5825,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2019-11-01,0.67625,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2019-12-01,0.487142857142857,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-01-01,0.633333333333333,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-02-01,0.517142857142857,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-03-01,0.64,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-04-01,0.5575,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-05-01,0.52375,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-06-01,0.603333333333333,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-07-01,0.518888888888889,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-08-01,0.45125,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-09-01,0.528888888888889,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-10-01,0.513333333333333,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-11-01,0.53,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2020-12-01,0.495,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-01-01,0.4125,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-02-01,0.402857142857143,0.5164285732320595,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-03-01,0.451111111111111,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-04-01,0.367777777777778,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-05-01,0.44125,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-06-01,0.412222222222222,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-07-01,0.422222222222222,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-08-01,0.45,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-09-01,0.463333333333333,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-10-01,0.4325,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-11-01,0.494285714285714,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2021-12-01,0.494444444444444,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-01-01,0.4775,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-02-01,0.545,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-03-01,0.532222222222222,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-04-01,0.521428571428572,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-05-01,0.65875,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-06-01,0.665,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-07-01,0.58,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-08-01,0.59375,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-09-01,0.697777777777778,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-10-01,0.746666666666667,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-11-01,0.67,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2022-12-01,0.665714285714286,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2023-01-01,0.714285714285714,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2023-02-01,0.76,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base
+2023-03-01,0.598571428571429,0.47252349811904015,Maracuya,Santo Domingo De Los Tsáchilas,arima,maracuya,base

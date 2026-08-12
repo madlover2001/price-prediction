@@ -24,9 +24,6 @@
     "target_rolling_std_6",
     "target_momentum_1_3",
     "target_momentum_1_6",
-    "mercados_observaciones",
-    "mercados_distintos",
-    "tipos_mercado_distintos",
     "precio_productor_provincia_usdkg",
     "precio_productor_nacional_usdkg",
     "precio_productor_usdkg_filled",
@@ -58,35 +55,74 @@
   "holdout_test_ratio": 0.2,
   "epochs": 120,
   "batch_size": 8,
-  "lstm_units": 64,
+  "lstm_units": 32,
   "learning_rate": 0.001,
   "verbose": 0,
-  "validation_rmse_mean": 0.2435491399726193,
-  "validation_windows_results": [
+  "hyperparam_grid": [
     {
-      "mae": 0.22958323144697929,
-      "rmse": 0.2573816900857239,
-      "mape": 45.97873770740451,
-      "r2": -2.195082932921572,
-      "directional_accuracy": 0.6909090909090909,
-      "n_test": 111
+      "window_size": 6,
+      "lstm_units": 32
     },
     {
-      "mae": 0.2708697888534516,
-      "rmse": 0.35215355836344064,
-      "mape": 44.527283576985006,
-      "r2": -4.996044187920454,
-      "directional_accuracy": 0.6666666666666666,
-      "n_test": 115
+      "window_size": 6,
+      "lstm_units": 64
     },
     {
-      "mae": 0.09132140735599482,
-      "rmse": 0.12111217146869337,
-      "mape": 15.908531450457227,
-      "r2": 0.4012708801455377,
-      "directional_accuracy": 0.7547169811320755,
-      "n_test": 107
+      "window_size": 8,
+      "lstm_units": 32
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 64
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 32
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 64
     }
   ],
-  "n_validation_windows": 3
+  "hyperparam_tuning_results": [
+    {
+      "window_size": 6,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.1920971634515922,
+      "n_windows": 3
+    },
+    {
+      "window_size": 6,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.19112100479933947,
+      "n_windows": 3
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.14116273285459602,
+      "n_windows": 3
+    },
+    {
+      "window_size": 8,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.14748623109362513,
+      "n_windows": 3
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 32,
+      "validation_rmse_mean": 0.2556217303186254,
+      "n_windows": 3
+    },
+    {
+      "window_size": 10,
+      "lstm_units": 64,
+      "validation_rmse_mean": 0.16079661448974994,
+      "n_windows": 3
+    }
+  ],
+  "validation_rmse_mean": 0.14116273285459602,
+  "operational_rmse_mean": 0.08312809813325019,
+  "validation_predictions_file": "models\\tomate_rinon_invernadero\\lstm\\full\\validation_predictions.csv"
 }

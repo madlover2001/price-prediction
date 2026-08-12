@@ -22,9 +22,6 @@
     "target_rolling_std_6",
     "target_momentum_1_3",
     "target_momentum_1_6",
-    "mercados_observaciones",
-    "mercados_distintos",
-    "tipos_mercado_distintos",
     "precio_productor_provincia_usdkg",
     "precio_productor_nacional_usdkg",
     "precio_productor_usdkg_filled",
@@ -70,8 +67,60 @@
   "tuning_results": [
     {
       "candidate": 0,
-      "validation_rmse_mean": 0.09613482380491588,
-      "validation_mae_mean": 0.07676014113838933,
+      "blend_weight": 0.0,
+      "validation_rmse_mean": 0.0971819554107954,
+      "validation_mae_mean": 0.07773238814473919,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 0,
+      "blend_weight": 0.1,
+      "validation_rmse_mean": 0.09220297502820085,
+      "validation_mae_mean": 0.07399226963478232,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 0,
+      "blend_weight": 0.2,
+      "validation_rmse_mean": 0.08833799718316954,
+      "validation_mae_mean": 0.0713553889495893,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 0,
+      "blend_weight": 0.3,
+      "validation_rmse_mean": 0.08571701828260854,
+      "validation_mae_mean": 0.06970481046094984,
       "n_windows": 3,
       "params": {
         "n_estimators": 500,
@@ -86,8 +135,66 @@
     },
     {
       "candidate": 1,
-      "validation_rmse_mean": 0.09144935694068192,
-      "validation_mae_mean": 0.07391006448260962,
+      "blend_weight": 0.0,
+      "validation_rmse_mean": 0.09049898389231127,
+      "validation_mae_mean": 0.07276874848939319,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 700,
+        "max_depth": 3,
+        "learning_rate": 0.025,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 1,
+        "reg_lambda": 1.5,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 1,
+      "blend_weight": 0.1,
+      "validation_rmse_mean": 0.08622726279160649,
+      "validation_mae_mean": 0.06950182746752041,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 700,
+        "max_depth": 3,
+        "learning_rate": 0.025,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 1,
+        "reg_lambda": 1.5,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 1,
+      "blend_weight": 0.2,
+      "validation_rmse_mean": 0.08313325417941266,
+      "validation_mae_mean": 0.06740069924209373,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 700,
+        "max_depth": 3,
+        "learning_rate": 0.025,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 1,
+        "reg_lambda": 1.5,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 1,
+      "blend_weight": 0.3,
+      "validation_rmse_mean": 0.08133644189749734,
+      "validation_mae_mean": 0.06589358898056803,
       "n_windows": 3,
       "params": {
         "n_estimators": 700,
@@ -104,8 +211,66 @@
     },
     {
       "candidate": 2,
-      "validation_rmse_mean": 0.07885580827092585,
-      "validation_mae_mean": 0.06338767637171776,
+      "blend_weight": 0.0,
+      "validation_rmse_mean": 0.07947398417891588,
+      "validation_mae_mean": 0.06386834704975451,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 2,
+        "learning_rate": 0.04,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "min_child_weight": 2,
+        "reg_lambda": 3.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 2,
+      "blend_weight": 0.1,
+      "validation_rmse_mean": 0.0766260732053261,
+      "validation_mae_mean": 0.06173222650373992,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 2,
+        "learning_rate": 0.04,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "min_child_weight": 2,
+        "reg_lambda": 3.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 2,
+      "blend_weight": 0.2,
+      "validation_rmse_mean": 0.07501965494959273,
+      "validation_mae_mean": 0.06058304023230568,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 500,
+        "max_depth": 2,
+        "learning_rate": 0.04,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "min_child_weight": 2,
+        "reg_lambda": 3.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 2,
+      "blend_weight": 0.3,
+      "validation_rmse_mean": 0.07472480560397765,
+      "validation_mae_mean": 0.06023883601194163,
       "n_windows": 3,
       "params": {
         "n_estimators": 500,
@@ -122,8 +287,66 @@
     },
     {
       "candidate": 3,
-      "validation_rmse_mean": 0.08165063312814175,
-      "validation_mae_mean": 0.06671234485198729,
+      "blend_weight": 0.0,
+      "validation_rmse_mean": 0.08044298949022845,
+      "validation_mae_mean": 0.06527422326790895,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 350,
+        "max_depth": 2,
+        "learning_rate": 0.06,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "min_child_weight": 1,
+        "reg_lambda": 5.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 3,
+      "blend_weight": 0.1,
+      "validation_rmse_mean": 0.07780443711354731,
+      "validation_mae_mean": 0.06313738896408358,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 350,
+        "max_depth": 2,
+        "learning_rate": 0.06,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "min_child_weight": 1,
+        "reg_lambda": 5.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 3,
+      "blend_weight": 0.2,
+      "validation_rmse_mean": 0.07633120933530615,
+      "validation_mae_mean": 0.0618165639822136,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 350,
+        "max_depth": 2,
+        "learning_rate": 0.06,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "min_child_weight": 1,
+        "reg_lambda": 5.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 3,
+      "blend_weight": 0.3,
+      "validation_rmse_mean": 0.07608292749449845,
+      "validation_mae_mean": 0.06137058220040781,
       "n_windows": 3,
       "params": {
         "n_estimators": 350,
@@ -140,8 +363,66 @@
     },
     {
       "candidate": 4,
-      "validation_rmse_mean": 0.08643355102098942,
-      "validation_mae_mean": 0.06939814338289257,
+      "blend_weight": 0.0,
+      "validation_rmse_mean": 0.08669739926468838,
+      "validation_mae_mean": 0.0696402287325304,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 900,
+        "max_depth": 3,
+        "learning_rate": 0.015,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "min_child_weight": 2,
+        "reg_lambda": 2.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 4,
+      "blend_weight": 0.1,
+      "validation_rmse_mean": 0.08298183253521424,
+      "validation_mae_mean": 0.06691857901004968,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 900,
+        "max_depth": 3,
+        "learning_rate": 0.015,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "min_child_weight": 2,
+        "reg_lambda": 2.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 4,
+      "blend_weight": 0.2,
+      "validation_rmse_mean": 0.08044262098689736,
+      "validation_mae_mean": 0.06507822218464647,
+      "n_windows": 3,
+      "params": {
+        "n_estimators": 900,
+        "max_depth": 3,
+        "learning_rate": 0.015,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "min_child_weight": 2,
+        "reg_lambda": 2.0,
+        "objective": "reg:squarederror",
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    {
+      "candidate": 4,
+      "blend_weight": 0.3,
+      "validation_rmse_mean": 0.07918644620176549,
+      "validation_mae_mean": 0.06406800025270676,
       "n_windows": 3,
       "params": {
         "n_estimators": 900,
@@ -157,9 +438,17 @@
       }
     }
   ],
-  "validation_rmse_mean": 0.07885580827092585,
+  "validation_rmse_mean": 0.07472480560397765,
+  "operational_rmse_mean": 0.09569198221147324,
   "n_validation_windows": 3,
   "enable_param_tuning": true,
   "lag_blend_feature": "target_lag_1",
-  "lag_blend_weight": 0.2
+  "lag_blend_weight": 0.3,
+  "lag_blend_weight_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "validation_predictions_file": "models\\tomate_rinon_invernadero\\xgboost\\full\\validation_predictions.csv"
 }

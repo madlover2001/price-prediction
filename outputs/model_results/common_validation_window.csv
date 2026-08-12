@@ -1,0 +1,10 @@
+﻿product_id,product_name,model_name,feature_set,validation_rmse_common,validation_mae_common,validation_mape_common,n
+papa_superchola,Papa Superchola,xgboost,full,0.045299336431927635,0.03777115375111299,9.858660084693204,114
+papa_superchola,Papa Superchola,lstm,full,0.10812216515601591,0.0914682539408667,24.479312767627732,114
+papa_superchola,Papa Superchola,arima,full,0.17575355219002542,0.12770375664782418,33.236550898117464,114
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,xgboost,full,0.0803941199418386,0.06522666251945353,12.456794460858552,177
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,lstm,full,0.17184653595880114,0.14402173501623552,28.334295596612076,177
+tomate_rinon_invernadero,Tomate Rinon de Invernadero,arima,full,0.48566799374922087,0.3622468169619093,68.53583625807447,177
+maracuya,Maracuya,xgboost,full,0.14149266797219331,0.10070269935314283,17.721845799696545,93
+maracuya,Maracuya,lstm,full,0.17944088325643448,0.14159491257641904,25.463460082605277,93
+maracuya,Maracuya,arima,full,0.37932521145828774,0.28052717657350323,49.86005635770505,93

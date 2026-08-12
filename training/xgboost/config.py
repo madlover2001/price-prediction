@@ -1,7 +1,12 @@
 MODEL_NAME = "xgboost"
 ENABLE_PARAM_TUNING = True
 LAG_BLEND_FEATURE = "target_lag_1"
-LAG_BLEND_WEIGHT = 0.2
+# El peso de mezcla ya no es fijo: se valida junto con los hiperparametros (punto C.2 de
+# la revision del companero). Antes se evaluaba sin blend en validacion pero se aplicaba
+# en test/prototipo -- el modelo validado no era el modelo desplegado. 0.0 = sin blend
+# (deja la opcion "eliminar el blend" disponible como caso particular si gana en
+# validacion, sin necesidad de una bandera aparte).
+LAG_BLEND_WEIGHT_GRID = [0.0, 0.1, 0.2, 0.3]
 
 BASE_PARAMS = {
     "objective": "reg:squarederror",

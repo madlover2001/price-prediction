@@ -82,7 +82,7 @@ def _sarimax_horizon_predictions(product_id: str, target_column: str, horizons: 
     if not metadata_path.exists():
         return pd.DataFrame()
 
-    from training.arima.train import _import_sarimax, _is_stable_forecast, _prepare_series, fit_sarimax
+    from training.arima.train import _import_sarimax, _is_stable_forecast, _prepare_full_series, fit_sarimax
 
     metadata = read_json(metadata_path)
     exog_columns = metadata.get("exog_columns", [])
@@ -110,7 +110,7 @@ def _sarimax_horizon_predictions(product_id: str, target_column: str, horizons: 
             history = province_df[province_df["fecha"] < origin_date]
             if history.empty:
                 continue
-            series, exog = _prepare_series(history, target_column, exog_columns)
+            series, exog = _prepare_full_series(history, target_column, exog_columns)
             last_row = history.iloc[-1]
             last_date = history["fecha"].max()
             future_exog = (

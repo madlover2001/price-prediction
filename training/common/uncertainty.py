@@ -241,3 +241,73 @@ def run_rmse_uncertainty() -> None:
 
     pd.DataFrame(ci_rows).to_csv(ci_path, index=False, encoding="utf-8-sig")
     pd.DataFrame(pairwise_rows).to_csv(pairwise_path, index=False, encoding="utf-8-sig")
+
+
+def run_ablation_uncertainty() -> None:
+    """Punto C.5 de la revision del companero: el bootstrap de `run_rmse_uncertainty`
+    responde "¿XGBoost difiere de LSTM/SARIMAX?", pero la hipotesis pregunta "¿anadir
+    exogenas mejora el modelo?". Aqui se contrasta cada modelo contra si mismo, `base` vs
+    `full` (mismo holdout, mismas filas -- no hace falta interseccion de 3 modelos), con
+    el mismo block bootstrap pareado + Holm-Bonferroni sobre las 9 comparaciones
+    (3 productos x 3 modelos)."""
+    from training.common.registry import MODEL_NAMES, MODEL_RESULTS_DIR, PRODUCTS, prediction_path
+
+    rows = []
+    for product_id, product in PRODUCTS.items():
+        for model_name in MODEL_NAMES:
+            base_path = prediction_path(product_id, model_name, "base")
+            full_path = prediction_path(product_id, model_name, "full")
+            if not base_path.exists() or not full_path.exists():
+                continue
+            base_df = pd.read_csv(base_path, encoding="utf-8-sig")
+            full_df = pd.read_csv(full_path, encoding="utf-8-sig")
+            if base_df.empty or full_df.empty:
+                continue
+            base_df["fecha"] = pd.to_datetime(base_df["fecha"])
+            full_df["fecha"] = pd.to_datetime(full_df["fecha"])
+
+            # base y full comparten el mismo holdout (mismos cortes, independientes del
+            # feature_set), pero LSTM puede elegir un window_size distinto por
+            # configuracion (C.8), lo que puede recortar filas iniciales de forma
+            # distinta -- se empareja explicitamente por (provincia, fecha) en vez de
+            # asumir el mismo orden/longitud.
+            merged = base_df[["provincia", "fecha", "y_true", "y_pred"]].merge(
+                full_df[["provincia", "fecha", "y_true", "y_pred"]],
+                on=["provincia", "fecha"],
+                how="inner",
+                suffixes=("_base", "_full"),
+            )
+            if merged.empty:
+                continue
+            merged = merged.sort_values(["provincia", "fecha"]).reset_index(drop=True)
+
+            y_true = merged["y_true_full"].to_numpy()
+            provincia = merged["provincia"].to_numpy()
+            delta_mean, lower, upper, significant, p_value = bootstrap_rmse_delta(
+                y_true, merged["y_pred_base"].to_numpy(), merged["y_pred_full"].to_numpy(), provincia
+            )
+            rows.append(
+                {
+                    "product_id": product_id,
+                    "product_name": product.display_name,
+                    "model_name": model_name,
+                    "n": int(len(merged)),
+                    # positivo = full mejora sobre base (RMSE base > RMSE full), mismo
+                    # signo que delta_rmse_full_vs_base en ablation_summary.csv.
+                    "delta_rmse_base_minus_full": delta_mean,
+                    "delta_ci_lower": lower,
+                    "delta_ci_upper": upper,
+                    "significant_95": significant,
+                    "p_value_bootstrap": p_value,
+                }
+            )
+
+    if rows:
+        p_values = [row["p_value_bootstrap"] for row in rows]
+        holm_significant = holm_bonferroni(p_values, alpha=1 - CONFIDENCE)
+        for row, significant_holm in zip(rows, holm_significant):
+            row["significant_holm"] = significant_holm
+
+    MODEL_RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    path = MODEL_RESULTS_DIR / "ablation_rmse_significance.csv"
+    pd.DataFrame(rows).to_csv(path, index=False, encoding="utf-8-sig")

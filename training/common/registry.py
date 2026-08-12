@@ -140,17 +140,24 @@ def rebuild_consolidated_results() -> None:
 
     # La seleccion del "mejor modelo" solo compite entre configuraciones "full" (la
     # ablacion "base" existe unicamente para medir el aporte de las exogenas, no para
-    # ganar). El criterio es el RMSE promedio de las ventanas de validacion internas del
-    # 80% de desarrollo -- nunca el RMSE de test. Esto corrige el punto #2 del docente
-    # (el test set ya no decide que modelo gana). Ver docs/correcciones_docente.md.
+    # ganar). El criterio es `operational_rmse_mean` -- desempeno agregado en pronostico
+    # recursivo h=1..3 con carry-forward, evaluado dentro del 80% de desarrollo (nunca
+    # toca el test) -- no el RMSE de un paso adelante. Corrige el punto C.6/C.7 de la
+    # revision del companero: el prototipo promete horizontes de 1 a 3 meses, y el
+    # "mejor modelo" retrospectivo de un paso no necesariamente es el mejor modelo
+    # operacional. `validation_rmse_mean` (un paso, por familia) y `validation_rmse_common`
+    # (ventana comun de validacion, ver common_validation_window.csv) se conservan como
+    # campos secundarios de transparencia, no deciden. Ver docs/correcciones_docente.md.
     full_df = metrics_df[metrics_df["feature_set"] == "full"].copy()
     comparison_rows = []
     best_models = {}
     for product_id, group in full_df.groupby("product_id", sort=True):
-        if "validation_rmse_mean" not in group.columns or group["validation_rmse_mean"].isna().all():
+        if "operational_rmse_mean" not in group.columns or group["operational_rmse_mean"].isna().all():
             ordered = group.sort_values(["rmse", "mae", "mape", "model_name"])
+            selection_metric = "rmse"
         else:
-            ordered = group.sort_values(["validation_rmse_mean", "rmse", "mae", "model_name"])
+            ordered = group.sort_values(["operational_rmse_mean", "rmse", "mae", "model_name"])
+            selection_metric = "operational_rmse_mean"
         best = ordered.iloc[0]
         comparison_rows.append(best.to_dict())
         model_name = str(best["model_name"])
@@ -158,7 +165,8 @@ def rebuild_consolidated_results() -> None:
             "product_name": PRODUCTS[product_id].display_name,
             "best_model": model_name,
             "feature_set": "full",
-            "selection_metric": "validation_rmse_mean",
+            "selection_metric": selection_metric,
+            "operational_rmse_mean": float(best.get("operational_rmse_mean", float("nan"))),
             "validation_rmse_mean": float(best.get("validation_rmse_mean", float("nan"))),
             "test_metrics": {
                 "mae": float(best["mae"]),

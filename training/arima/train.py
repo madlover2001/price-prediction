@@ -24,10 +24,10 @@ from training.arima.config import (
 )
 from training.common.config import FEATURE_SETS, HOLDOUT_TEST_RATIO, MIN_TEST_OBS_FOR_PROVINCE_CONCLUSIONS
 from training.common.data_loader import load_product_dataset
-from training.common.horizon import CALENDAR_FEATURES, TRUE_EXOG_BASE_COLUMNS
+from training.common.horizon import CALENDAR_FEATURES, TRUE_EXOG_BASE_COLUMNS, build_future_exog_frame
 from training.common.metrics import regression_metrics
 from training.common.registry import artifact_dir, selected_products, write_json, write_model_result
-from training.common.splits import compute_holdout_cutoffs, expanding_validation_windows
+from training.common.splits import apply_holdout_cutoffs, compute_holdout_cutoffs, expanding_validation_windows
 
 # Variables exogenas "verdaderas" que se le pasan a SARIMAX en feature_set="full" (no se
 # incluyen los rezagos del propio target: el orden AR/estacional ya captura esa memoria).
@@ -59,47 +59,78 @@ def fit_sarimax(SARIMAX, series: pd.Series, order: tuple, seasonal_order: tuple,
         return model.fit(disp=False)
 
 
-def _prepare_series(df: pd.DataFrame, target_column: str, exog_columns: list[str]):
-    ordered = df.sort_values("fecha").set_index("fecha").asfreq("MS")
-    series = ordered[target_column].interpolate().ffill().bfill()
-    exog = None
-    if exog_columns:
-        exog = ordered[exog_columns].interpolate().ffill().bfill()
+def _prepare_full_series(group: pd.DataFrame, target_column: str, exog_columns: list[str]):
+    """Serie mensual continua de TODA la historia de la provincia (no de un tramo ya
+    recortado). Rellenar huecos de calendario con contexto pasado completo evita que un
+    tramo recortado (train/test/ventana) quede con un hueco inicial que ffill no pueda
+    resolver, y evita cualquier fuga hacia el pasado (solo ffill, nunca interpolate/bfill
+    -- ver docs/correcciones_docente.md, punto C.1 de la revision del companero)."""
+    ordered = group.sort_values("fecha").set_index("fecha").asfreq("MS")
+    series = ordered[target_column].ffill()
+    exog = ordered[exog_columns].ffill() if exog_columns else None
     return series, exog
 
 
-def _is_stable_forecast(forecast_values, reference_values, max_multiple: float = 25.0) -> bool:
+def _is_stable_forecast(forecast_values, reference_values, max_multiple: float = 5.0) -> bool:
     """Con enforce_stationarity=False, algunos ordenes del grid producen pronosticos que
     divergen numericamente (raices AR/estacionales fuera del circulo unitario). Se
     descartan aqui en vez de dejarlos contaminar la seleccion de orden o las metricas
-    finales con RMSE de escala irreal (ver docs/correcciones_docente.md, nota tecnica)."""
+    finales con RMSE de escala irreal (ver docs/correcciones_docente.md, nota tecnica).
+
+    `max_multiple` se endurecio de 25x a 5x, y se agrego una cota de no-negatividad: con
+    las ventanas compartidas de C.3, algunas combinaciones provincia-ventana producian
+    pronosticos moderadamente divergentes (precios negativos o 3-4x el rango real) que
+    25x no alcanzaba a descartar y contaminaban common_validation_window.csv con RMSE de
+    escala irreal (ver docs/correcciones_docente.md)."""
     forecast_values = np.asarray(forecast_values, dtype=float)
     if forecast_values.size == 0 or not np.all(np.isfinite(forecast_values)):
+        return False
+    if np.any(forecast_values < 0):
+        # Los precios de mercado (USD/kg) nunca son negativos; un pronostico negativo es
+        # en si mismo evidencia de divergencia numerica del modelo.
         return False
     reference_values = np.asarray(reference_values, dtype=float)
     reference_values = reference_values[np.isfinite(reference_values)]
     if reference_values.size == 0:
         return True
     reference_scale = max(float(np.max(np.abs(reference_values))), 1e-6)
-    return bool(np.all(np.abs(forecast_values) <= max_multiple * reference_scale))
+    return bool(np.all(forecast_values <= max_multiple * reference_scale))
+
+
+def _window_bounds_from_pooled(pooled_windows) -> list[tuple]:
+    """Convierte las ventanas expansivas (calculadas una sola vez, agrupando todas las
+    provincias) en simples limites de fecha (train_end, val_start, val_end). Estos limites
+    son los mismos para las 3 familias de modelo -- corrige el punto C.3 de la revision
+    del companero: antes SARIMAX recalculaba ventanas por provincia con cortes propios,
+    distintos a los de XGBoost/LSTM."""
+    bounds = []
+    for train_window, val_window in pooled_windows:
+        if train_window.empty or val_window.empty:
+            continue
+        bounds.append((train_window["fecha"].max(), val_window["fecha"].min(), val_window["fecha"].max()))
+    return bounds
 
 
 def select_best_order(
     SARIMAX,
-    train_df: pd.DataFrame,
-    target_column: str,
-    exog_columns: list[str],
+    full_series: pd.Series,
+    full_exog: pd.DataFrame | None,
+    window_bounds: list[tuple],
 ) -> tuple[tuple, tuple, float, list[dict], list[dict]]:
-    windows = expanding_validation_windows(train_df)
     tuning_results = []
 
     for order in ORDER_GRID:
         for seasonal_order in SEASONAL_ORDER_GRID:
             window_rmses = []
-            for fit_window, val_window in windows:
+            for train_end, val_start, val_end in window_bounds:
+                fit_series = full_series.loc[:train_end]
+                val_series = full_series.loc[val_start:val_end]
+                if fit_series.empty or val_series.empty:
+                    window_rmses.append(math.inf)
+                    continue
+                fit_exog = full_exog.loc[:train_end] if full_exog is not None else None
+                val_exog = full_exog.loc[val_start:val_end] if full_exog is not None else None
                 try:
-                    fit_series, fit_exog = _prepare_series(fit_window, target_column, exog_columns)
-                    val_series, val_exog = _prepare_series(val_window, target_column, exog_columns)
                     fitted = fit_sarimax(SARIMAX, fit_series, order, seasonal_order, exog=fit_exog)
                     forecast = fitted.forecast(steps=len(val_series), exog=val_exog)
                     if not _is_stable_forecast(forecast.values, fit_series.values):
@@ -114,7 +145,7 @@ def select_best_order(
                     "order": order,
                     "seasonal_order": seasonal_order,
                     "validation_rmse_mean": mean_rmse,
-                    "n_windows": len(windows),
+                    "n_windows": len(window_bounds),
                 }
             )
 
@@ -129,6 +160,61 @@ def select_best_order(
     return best["order"], best["seasonal_order"], best["validation_rmse_mean"], tuning_results, valid_results
 
 
+def _oof_and_operational(
+    SARIMAX,
+    full_series: pd.Series,
+    full_exog: pd.DataFrame | None,
+    window_bounds: list[tuple],
+    order: tuple,
+    seasonal_order: tuple,
+    exog_columns: list[str],
+) -> tuple[pd.DataFrame, list[tuple]]:
+    """Con el orden ya elegido: genera predicciones OOF (una por cada mes de cada ventana
+    de validacion; las ventanas de validacion son disjuntas en fecha, asi que la
+    concatenacion cubre el 80% de desarrollo sin solapes -- insumo para la ventana comun
+    de validacion entre familias, punto C.3) y, sobre la ULTIMA ventana, un pronostico
+    operacional h=1..3 con exogenas propagadas al ultimo valor conocido (mismo supuesto
+    de carry-forward que training/common/horizon.py) -- insumo para el criterio de
+    seleccion de modelo, punto C.6/C.7."""
+    oof_rows = []
+    operational_errors: list[tuple] = []
+
+    for window_index, (train_end, val_start, val_end) in enumerate(window_bounds):
+        fit_series = full_series.loc[:train_end]
+        val_series = full_series.loc[val_start:val_end]
+        if fit_series.empty or val_series.empty:
+            continue
+        fit_exog = full_exog.loc[:train_end] if full_exog is not None else None
+        val_exog = full_exog.loc[val_start:val_end] if full_exog is not None else None
+        try:
+            fitted = fit_sarimax(SARIMAX, fit_series, order, seasonal_order, exog=fit_exog)
+            forecast = fitted.forecast(steps=len(val_series), exog=val_exog)
+        except Exception:
+            continue
+        if not _is_stable_forecast(forecast.values, fit_series.values):
+            continue
+
+        for fecha, y_true, y_pred in zip(val_series.index, val_series.values, forecast.values):
+            oof_rows.append({"fecha": fecha, "y_true": float(y_true), "y_pred": float(y_pred)})
+
+        if window_index == len(window_bounds) - 1:
+            max_h = min(3, len(val_series))
+            if max_h > 0:
+                future_exog = None
+                if exog_columns and fit_exog is not None and not fit_exog.empty:
+                    future_exog = build_future_exog_frame(fit_exog.iloc[-1], train_end, max_h, exog_columns)
+                try:
+                    operational_forecast = fitted.forecast(steps=max_h, exog=future_exog)
+                    for h in range(1, max_h + 1):
+                        operational_errors.append(
+                            (h, float(val_series.iloc[h - 1]), float(operational_forecast.iloc[h - 1]))
+                        )
+                except Exception:
+                    pass
+
+    return pd.DataFrame(oof_rows), operational_errors
+
+
 def train_product(product_id: str, feature_set: str) -> dict:
     SARIMAX = _import_sarimax()
     product = selected_products(product_id)[0]
@@ -138,13 +224,18 @@ def train_product(product_id: str, feature_set: str) -> dict:
     exog_columns = EXOG_COLUMNS if feature_set == "full" else []
     cutoffs = compute_holdout_cutoffs(bundle.data, test_ratio=HOLDOUT_TEST_RATIO)
     # "base" y "full" seleccionan su orden SIEMPRE mediante la misma busqueda en grid
-    # validada por ventanas expansivas (nunca via los overrides manuales que se usaban
-    # antes solo para "base"): usar un procedimiento fijo para un brazo de la ablacion y
-    # uno validado para el otro habria sesgado la comparacion del punto #1 del docente.
+    # validada por ventanas expansivas (nunca via overrides manuales), y ambos usan las
+    # MISMAS ventanas (por fecha, agrupando todas las provincias) que XGBoost/LSTM.
     selection_strategy = "validation_grid_search"
+
+    train_df, _ = apply_holdout_cutoffs(bundle.data, cutoffs)
+    pooled_windows = expanding_validation_windows(train_df)
+    window_bounds = _window_bounds_from_pooled(pooled_windows)
 
     province_metrics = []
     prediction_parts = []
+    oof_parts = []
+    operational_errors_all: list[tuple] = []
     model_files = {}
     selected_orders = {}
     validation_rmse_by_province = []
@@ -156,23 +247,27 @@ def train_product(product_id: str, feature_set: str) -> dict:
         if cutoff is None:
             continue
 
-        train_part = group[group["fecha"] < cutoff]
-        test_part = group[group["fecha"] >= cutoff]
-        if train_part.empty or test_part.empty:
+        full_series, full_exog = _prepare_full_series(group, bundle.target_column, exog_columns)
+        train_series = full_series.loc[full_series.index < cutoff]
+        test_series = full_series.loc[full_series.index >= cutoff]
+        train_exog = full_exog.loc[full_exog.index < cutoff] if full_exog is not None else None
+        test_exog = full_exog.loc[full_exog.index >= cutoff] if full_exog is not None else None
+        if train_series.empty or test_series.empty:
             continue
 
-        best_order, best_seasonal_order, validation_rmse, tuning_results, ranked_candidates = select_best_order(
-            SARIMAX, train_part, bundle.target_column, exog_columns
-        )
+        # Ventanas globales, recortadas a las que caen enteramente antes del holdout de
+        # ESTA provincia (una provincia con cutoff mas temprano que otras no debe validar
+        # con fechas que para ella ya son parte del test).
+        province_window_bounds = [bounds for bounds in window_bounds if bounds[2] < cutoff]
 
-        train_series, train_exog = _prepare_series(train_part, bundle.target_column, exog_columns)
-        test_series, test_exog = _prepare_series(test_part, bundle.target_column, exog_columns)
+        best_order, best_seasonal_order, validation_rmse, tuning_results, ranked_candidates = select_best_order(
+            SARIMAX, full_series, full_exog, province_window_bounds
+        )
 
         # El orden ganador en validacion puede seguir siendo inestable sobre el horizonte
         # de test (mas largo que las ventanas de validacion). Se prueban los siguientes
         # candidatos rankeados hasta encontrar un pronostico numericamente estable; si
-        # ninguno lo es, se cae al orden conservador por defecto (sin componente
-        # estacional) como ultimo recurso.
+        # ninguno lo es, se cae a un orden conservador por defecto como ultimo recurso.
         candidates = ranked_candidates or [{"order": ORDER, "seasonal_order": SEASONAL_ORDER}]
         forecast = None
         fallback_used = False
@@ -207,7 +302,15 @@ def train_product(product_id: str, feature_set: str) -> dict:
         if not math.isnan(validation_rmse):
             validation_rmse_by_province.append(validation_rmse)
 
-        full_series, full_exog = _prepare_series(group, bundle.target_column, exog_columns)
+        oof_df, operational_errors = _oof_and_operational(
+            SARIMAX, full_series, full_exog, province_window_bounds, best_order, best_seasonal_order, exog_columns
+        )
+        if not oof_df.empty:
+            oof_df["producto"] = group["producto"].iloc[0]
+            oof_df["provincia"] = province
+            oof_parts.append(oof_df)
+        operational_errors_all.extend(operational_errors)
+
         final_fitted = fit_sarimax(SARIMAX, full_series, best_order, best_seasonal_order, exog=full_exog)
 
         province_key = str(province).lower().replace(" ", "_")
@@ -227,7 +330,7 @@ def train_product(product_id: str, feature_set: str) -> dict:
                 # Se usa el valor de "producto" tal como aparece en el dataset (no
                 # product.display_name) para que coincida byte a byte con XGBoost/LSTM y
                 # la interseccion de la ventana comun de evaluacion (punto #3) funcione.
-                "producto": test_part["producto"].iloc[0],
+                "producto": group["producto"].iloc[0],
                 "provincia": province,
                 "y_true": test_series.values,
                 "y_pred": forecast.values,
@@ -246,6 +349,28 @@ def train_product(product_id: str, feature_set: str) -> dict:
     metrics["validation_rmse_mean"] = (
         float(np.mean(validation_rmse_by_province)) if validation_rmse_by_province else math.nan
     )
+
+    # Criterio operacional de seleccion (C.6/C.7): RMSE agregado de los pronosticos
+    # h=1,2,3 con carry-forward de la ultima ventana de validacion de cada provincia,
+    # nunca toca el test.
+    if operational_errors_all:
+        y_true_op = np.array([row[1] for row in operational_errors_all], dtype=float)
+        y_pred_op = np.array([row[2] for row in operational_errors_all], dtype=float)
+        metrics["operational_rmse_mean"] = float(np.sqrt(np.mean((y_true_op - y_pred_op) ** 2)))
+    else:
+        metrics["operational_rmse_mean"] = math.nan
+
+    oof_predictions = (
+        pd.concat(oof_parts, ignore_index=True)
+        if oof_parts
+        else pd.DataFrame(columns=["fecha", "y_true", "y_pred", "producto", "provincia"])
+    )
+    if not oof_predictions.empty:
+        oof_predictions["model_name"] = MODEL_NAME
+        oof_predictions["product_id"] = product.product_id
+        oof_predictions["feature_set"] = feature_set
+    validation_predictions_path = directory / "validation_predictions.csv"
+    oof_predictions.to_csv(validation_predictions_path, index=False, encoding="utf-8-sig")
 
     province_metrics_path = directory / "province_metrics.csv"
     pd.DataFrame(province_metrics).to_csv(province_metrics_path, index=False, encoding="utf-8-sig")
@@ -266,7 +391,10 @@ def train_product(product_id: str, feature_set: str) -> dict:
         "min_observations": MIN_OBSERVATIONS,
         "min_test_obs_for_province_conclusions": MIN_TEST_OBS_FOR_PROVINCE_CONCLUSIONS,
         "validation_rmse_mean": metrics["validation_rmse_mean"],
+        "operational_rmse_mean": metrics["operational_rmse_mean"],
+        "n_validation_windows": len(window_bounds),
         "province_metrics_file": str(province_metrics_path.relative_to(ROOT_DIR)),
+        "validation_predictions_file": str(validation_predictions_path.relative_to(ROOT_DIR)),
     }
     write_json(directory / "config.json", metadata)
     write_model_result(product.product_id, MODEL_NAME, feature_set, metrics, metadata, all_predictions)

@@ -3,14 +3,15 @@
     "product_name": "Maracuya",
     "best_model": "xgboost",
     "feature_set": "full",
-    "selection_metric": "validation_rmse_mean",
-    "validation_rmse_mean": 0.1351209322669006,
+    "selection_metric": "operational_rmse_mean",
+    "operational_rmse_mean": 0.15783548893174126,
+    "validation_rmse_mean": 0.11623034957890906,
     "test_metrics": {
-      "mae": 0.08044411820051409,
-      "rmse": 0.10147212200833844,
-      "mape": 11.03180844346058,
-      "r2": 0.5193729620140517,
-      "directional_accuracy": 0.9024390243902439
+      "mae": 0.07583681759171658,
+      "rmse": 0.0960348880938737,
+      "mape": 10.405514923960046,
+      "r2": 0.5695003696394966,
+      "directional_accuracy": 0.8902439024390244
     },
     "artifact_dir": "models\\maracuya\\xgboost\\full",
     "prediction_file": "outputs\\model_results\\predictions\\maracuya_xgboost_full_predictions.csv"
@@ -19,13 +20,14 @@
     "product_name": "Papa Superchola",
     "best_model": "xgboost",
     "feature_set": "full",
-    "selection_metric": "validation_rmse_mean",
-    "validation_rmse_mean": 0.04908953493018426,
+    "selection_metric": "operational_rmse_mean",
+    "operational_rmse_mean": 0.0631687147261084,
+    "validation_rmse_mean": 0.047538509278749454,
     "test_metrics": {
-      "mae": 0.04714405992504517,
-      "rmse": 0.06259783764898515,
-      "mape": 8.841287910876613,
-      "r2": 0.8186556462066227,
+      "mae": 0.04570986002289623,
+      "rmse": 0.05944110571403887,
+      "mape": 8.613019673359451,
+      "r2": 0.8364844217747779,
       "directional_accuracy": 0.8666666666666667
     },
     "artifact_dir": "models\\papa_superchola\\xgboost\\full",
@@ -33,18 +35,19 @@
   },
   "tomate_rinon_invernadero": {
     "product_name": "Tomate Rinon de Invernadero",
-    "best_model": "xgboost",
+    "best_model": "lstm",
     "feature_set": "full",
-    "selection_metric": "validation_rmse_mean",
-    "validation_rmse_mean": 0.07885580827092585,
+    "selection_metric": "operational_rmse_mean",
+    "operational_rmse_mean": 0.08312809813325019,
+    "validation_rmse_mean": 0.14116273285459602,
     "test_metrics": {
-      "mae": 0.06073876059530758,
-      "rmse": 0.07670917692753285,
-      "mape": 10.15145921454581,
-      "r2": 0.7841853280358108,
-      "directional_accuracy": 0.8762886597938144
+      "mae": 0.06672672684095343,
+      "rmse": 0.0824535647446065,
+      "mape": 11.354759660807737,
+      "r2": 0.7506524233742394,
+      "directional_accuracy": 0.7319587628865979
     },
-    "artifact_dir": "models\\tomate_rinon_invernadero\\xgboost\\full",
-    "prediction_file": "outputs\\model_results\\predictions\\tomate_rinon_invernadero_xgboost_full_predictions.csv"
+    "artifact_dir": "models\\tomate_rinon_invernadero\\lstm\\full",
+    "prediction_file": "outputs\\model_results\\predictions\\tomate_rinon_invernadero_lstm_full_predictions.csv"
   }
 }

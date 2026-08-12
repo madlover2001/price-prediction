@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import numpy as np
@@ -33,10 +34,19 @@ TARGET_LAG_FEATURES = [
     "target_momentum_1_6",
 ]
 
-EXOGENOUS_CONTEXT_FEATURES = [
+# Campos de contexto de mercado (conteos de la propia fuente mercados): no son ninguna de
+# las 4 categorias que la hipotesis define como exogenas (precio productor, fertilizantes,
+# IPC/inflacion, indices sectoriales). Se quedan documentados en el dataset y en
+# feature_groups.market_context, pero NO entran a full_model_features -- corrige el punto
+# C.4 de la revision del companero: antes "full" mezclaba exogenas de la hipotesis con
+# contexto de mercado, dejando la ablacion menos limpia de lo que la hipotesis promete.
+MARKET_CONTEXT_FEATURES = [
     "mercados_observaciones",
     "mercados_distintos",
     "tipos_mercado_distintos",
+]
+
+EXOGENOUS_TRUE_FEATURES = [
     "precio_productor_provincia_usdkg",
     "precio_productor_nacional_usdkg",
     "precio_productor_usdkg_filled",
@@ -73,7 +83,7 @@ EXOGENOUS_LAG_FEATURES = [
 # contemporaneas y rezagadas. Esta separacion sostiene los experimentos de ablacion que miden
 # el aporte real de las exogenas (ver docs/correcciones_docente.md, punto 1).
 BASE_MODEL_FEATURES = ["provincia_id"] + CALENDAR_FEATURES + TARGET_LAG_FEATURES
-FULL_MODEL_FEATURES = BASE_MODEL_FEATURES + EXOGENOUS_CONTEXT_FEATURES + EXOGENOUS_LAG_FEATURES
+FULL_MODEL_FEATURES = BASE_MODEL_FEATURES + EXOGENOUS_TRUE_FEATURES + EXOGENOUS_LAG_FEATURES
 
 RECOMMENDED_FEATURES = FULL_MODEL_FEATURES
 LAG_FEATURES = TARGET_LAG_FEATURES + EXOGENOUS_LAG_FEATURES
@@ -142,6 +152,11 @@ def _fill_exogenous_features(df: pd.DataFrame) -> pd.DataFrame:
         "ipm",
         "ipp_n",
     ]
+    # Bandera para el punto C.9 (cuantificar el preprocesamiento): cuantas filas tenian
+    # algun indicador macro/sectorial faltante ANTES de completar, capturada antes del
+    # ffill de abajo.
+    filled["macro_missing_any"] = filled[national_fill_columns].isna().any(axis=1).astype(int)
+
     # ffill only: bfill would fill early gaps with a later (future) value, which is a
     # look-ahead leak relative to the row's own date. Rows still missing after ffill
     # (no observation yet exists) are dropped by the dropna in build_product_dataset.
@@ -182,15 +197,44 @@ def _add_group_lag_features(df: pd.DataFrame) -> pd.DataFrame:
     return lagged
 
 
+def _build_preprocessing_summary(registros_iniciales: int, final_df: pd.DataFrame) -> dict:
+    """Cuantificacion del preprocesamiento (punto C.9 de la revision del companero): el
+    tutor pidio porcentaje eliminado/imputado/transformado, no solo una descripcion del
+    procedimiento."""
+    registros_finales = int(len(final_df))
+    eliminados = int(registros_iniciales - registros_finales)
+    productor_imputado = int(final_df["productor_missing_exact"].sum()) if not final_df.empty else 0
+    fertilizantes_imputado = int(final_df["fertilizantes_missing_exact"].sum()) if not final_df.empty else 0
+    macro_completado = int(final_df["macro_missing_any"].sum()) if not final_df.empty else 0
+
+    def _pct(value: int, total: int) -> float:
+        return round(value / total * 100, 2) if total else 0.0
+
+    return {
+        "registros_iniciales": int(registros_iniciales),
+        "registros_eliminados": eliminados,
+        "pct_eliminado": _pct(eliminados, registros_iniciales),
+        "productor_imputado": productor_imputado,
+        "pct_productor_imputado": _pct(productor_imputado, registros_finales),
+        "fertilizantes_imputado": fertilizantes_imputado,
+        "pct_fertilizantes_imputado": _pct(fertilizantes_imputado, registros_finales),
+        "macro_completado": macro_completado,
+        "pct_macro_completado": _pct(macro_completado, registros_finales),
+        "registros_finales": registros_finales,
+    }
+
+
 def _build_metadata(
     product_config: dict,
     base_df: pd.DataFrame,
     final_df: pd.DataFrame,
     shared_provinces: list[str],
     productor_exact_matches: int,
+    registros_iniciales: int,
 ) -> dict:
     missing_counts = final_df.isna().sum()
     missing_counts = {key: int(value) for key, value in missing_counts.items() if int(value) > 0}
+    preprocessing_summary = _build_preprocessing_summary(registros_iniciales, final_df)
 
     return {
         "product_name": product_config["product_name"],
@@ -218,7 +262,7 @@ def _build_metadata(
         "feature_groups": {
             "identifiers": ["fecha", "producto", "provincia", "provincia_id", "anio", "mes_num", "trimestre"],
             "target": [TARGET_COLUMN, "target_precio_mercado_usd"],
-            "market_context": ["mercados_observaciones", "mercados_distintos", "tipos_mercado_distintos"],
+            "market_context": MARKET_CONTEXT_FEATURES,
             "producer_features": [
                 "precio_productor_provincia_usdkg",
                 "precio_productor_nacional_usdkg",
@@ -254,6 +298,7 @@ def _build_metadata(
         "base_model_features": BASE_MODEL_FEATURES,
         "full_model_features": FULL_MODEL_FEATURES,
         "missing_values_after_export": missing_counts,
+        "preprocessing_summary": preprocessing_summary,
     }
 
 
@@ -273,6 +318,11 @@ def build_product_dataset(product_id: str, output_dir: Path | None = None) -> tu
     shared_province_keys = sorted(set(target_df["provincia_key"]).intersection(set(productor_prov_df["provincia_key"])))
     target_df = target_df.loc[target_df["provincia_key"].isin(shared_province_keys)].copy()
     target_df = target_df.loc[target_df["fecha"] >= COMMON_START_DATE].copy()
+    # Punto de partida para la cuantificacion del preprocesamiento (C.9): registros de
+    # mercados ya acotados a provincias compartidas con productor y a la fecha comun, que
+    # es la base real sobre la que se construye el dataset (los merges de abajo son "left"
+    # y preservan este conteo; lo que reduce el numero de filas es el dropna final).
+    registros_iniciales = int(len(target_df))
 
     province_name_map = (
         target_df[["provincia_key", "provincia"]]
@@ -331,7 +381,28 @@ def build_product_dataset(product_id: str, output_dir: Path | None = None) -> tu
         final_df=model_ready,
         shared_provinces=shared_provinces,
         productor_exact_matches=productor_exact_matches,
+        registros_iniciales=registros_iniciales,
     )
     write_json(metadata_path, metadata)
 
     return dataset_path, metadata_path
+
+
+def build_preprocessing_summary_table(output_path: Path | None = None) -> Path:
+    """Agrega el preprocessing_summary de los 3 productos en una sola tabla, para citar
+    directamente en la tesis (punto C.9). Debe correrse despues de regenerar los 3
+    datasets, ya que lee metadata_features.json de cada uno."""
+    rows = []
+    for product_id, product_config in PRODUCT_CONFIGS.items():
+        metadata_path = product_config["output_dir"] / "metadata_features.json"
+        if not metadata_path.exists():
+            continue
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        summary = metadata.get("preprocessing_summary", {})
+        rows.append({"product_id": product_id, "producto": metadata.get("product_name"), **summary})
+
+    table = pd.DataFrame(rows)
+    destination = output_path or (Path(__file__).resolve().parents[1] / "outputs" / "feature_engineering_productos" / "preprocessing_summary.csv")
+    ensure_directory(destination.parent)
+    table.to_csv(destination, index=False, encoding="utf-8-sig")
+    return destination

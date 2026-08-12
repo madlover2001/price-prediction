@@ -1,0 +1,29 @@
+{
+  "papa_superchola": {
+    "product_id": "papa_superchola",
+    "models_available": [
+      "xgboost",
+      "lstm",
+      "arima"
+    ],
+    "common_validation_rows": 114
+  },
+  "tomate_rinon_invernadero": {
+    "product_id": "tomate_rinon_invernadero",
+    "models_available": [
+      "xgboost",
+      "lstm",
+      "arima"
+    ],
+    "common_validation_rows": 177
+  },
+  "maracuya": {
+    "product_id": "maracuya",
+    "models_available": [
+      "xgboost",
+      "lstm",
+      "arima"
+    ],
+    "common_validation_rows": 93
+  }
+}
